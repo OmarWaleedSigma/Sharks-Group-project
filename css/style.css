@@ -1,61 +1,137 @@
 :root {
-    --primary-color: #005DB7;
-    --text-dark-color: #011D35;
-    --text-light-color: #FFFFFF;
-    --text-blue-color: var(--primary-color);
-    --text-gray-color: #404752;
-    --bg-medium-blue-color: #1565C0;
-    --bg-light-blue-color: #2195f3;
-    --bg-light-color: #DBE9FF;
-    --bg-gray-color: #EEF4FF;
-    --bg-white-color: #FFFFFF;
+  --primary-color: #005db7;
+  --text-dark-color: #011d35;
+  --text-light-color: #ffffff;
+  --text-blue-color: var(--primary-color);
+  --text-gray-color: #404752;
+  --bg-dark-blue-color: #1565c0;
+  --bg-medium-blue-color: #2195f3;
+  --bg-light-blue-color: #64b5f6;
+  --bg-light-color: #dbe9ff;
+  --bg-gray-color: #eef4ff;
+  --bg-white-color: #ffffff;
+  --bg-light-gray-color:#F8F9FF;
+  --btn-dark-blue-color: #0061a4;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--primary-color);
-    padding: 8px 40px;
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary-color);
+  padding: 8px 40px;
+  height: 52px;
+  margin-bottom: 15px;
 }
-.logo{
-    display: flex;
-    align-items: center;
-    gap:10px
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.logo .img-container{
-    width:50px;
+.logo .img-container {
+  width: 50px;
 }
-.logo .img-container img{
-    width:100%;
-    object-fit: contain;
+.logo .img-container img {
+  width: 100%;
+  object-fit: contain;
 }
-.logo .logo-text{
-    font-size: 24px;
-    font-weight: bold;
-    color:var(--text-light-color)
+.logo .logo-text {
+  font-size: 24px;
+  font-weight: 900;
+  font-family: "Anybody", sans-serif;
+  font-style: italic;
+  line-height: 32px;
+  color: var(--text-light-color);
 }
-.nav-links{
-    display:flex;
-    justify-content: space-around;
-    list-style-type: none;
-    gap: 40px;
+.nav-links {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  gap: 50px;
 }
-.nav-links li a{
-    text-decoration: none;
-    color:var(--text-light-color)
+.nav-links::focus {
+  border-bottom: 2px solid var(--text-light-color);
 }
-nav .cta button{
-    padding:8px 10px;
-    border-radius: 5px;
-    background: var(--bg-white-color);
-    color:var(--primary-color);
-    border:none;
+
+.nav-links li a {
+  text-decoration: none;
+  color: var(--text-light-color);
+}
+nav .cta button {
+  padding: 8px 10px;
+  border-radius: 5px;
+  background: var(--bg-white-color);
+  color: var(--primary-color);
+  border: none;
+}
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(
+    to bottom,
+    var(--bg-dark-blue-color),
+    var(--bg-medium-blue-color),
+    var(--bg-light-blue-color)
+  );
+  margin-bottom: 200px;
+}
+.hero-browse-courses {
+  background-color: var(--bg-white-color);
+}
+.hero-browse-courses{
+  padding: 24px 48px 24px 48px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  border-radius: 12px;
+  background-color: var(--bg-white-color);
+  color:var(--btn-dark-blue-color);
+  border: none;
+  border-bottom: 3px solid #00468C;
+}
+.hero .main-h {
+  font-family: "Anybody", sans-serif;
+  font-weight: 800;
+  font-size: 64px;
+  line-height: 80px;
+  color: var(--text-light-color);
+  margin-bottom: 30px;
+}
+.hero .info {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+  color: var(--text-light-color);
+  margin-bottom: 27px;
+}
+.hero .buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.hero-watch-free-lesson{
+  padding: 24px 48px 24px 48px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  border-radius: 12px;
+  border: 2px solid var(--bg-white-color);
+  background-color: transparent;
+  color: var(--text-light-color);
 }
