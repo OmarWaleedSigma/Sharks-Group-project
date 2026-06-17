@@ -5,15 +5,17 @@
   --text-blue-color: var(--primary-color);
   --text-gray-color: #404752;
   --bg-dark-blue-color: #1565c0;
-  --bg-medium-blue-color: #2195f3;
+  --bg-medium-blue-color: #2196f3;
   --bg-light-blue-color: #64b5f6;
   --bg-light-color: #dbe9ff;
   --bg-gray-color: #eef4ff;
   --bg-white-color: #ffffff;
-  --bg-light-gray-color:#F8F9FF;
+  --bg-light-gray-color: #f8f9ff;
   --btn-dark-blue-color: #0061a4;
 }
-
+body {
+  background-color: var(--bg-light-gray-color);
+}
 * {
   margin: 0;
   padding: 0;
@@ -93,16 +95,16 @@ nav .cta button {
 .hero-browse-courses {
   background-color: var(--bg-white-color);
 }
-.hero-browse-courses{
+.hero-browse-courses {
   padding: 24px 48px 24px 48px;
   font-weight: 700;
   font-size: 14px;
   line-height: 20px;
   border-radius: 12px;
   background-color: var(--bg-white-color);
-  color:var(--btn-dark-blue-color);
+  color: var(--btn-dark-blue-color);
   border: none;
-  border-bottom: 3px solid #00468C;
+  border-bottom: 3px solid #00468c;
 }
 .hero .main-h {
   font-family: "Anybody", sans-serif;
@@ -125,7 +127,7 @@ nav .cta button {
   gap: 20px;
 }
 
-.hero-watch-free-lesson{
+.hero-watch-free-lesson {
   padding: 24px 48px 24px 48px;
   font-weight: 700;
   font-size: 14px;
@@ -134,4 +136,62 @@ nav .cta button {
   border: 2px solid var(--bg-white-color);
   background-color: transparent;
   color: var(--text-light-color);
+}
+.feature1,
+.feature2,
+.feature3 {
+  height: 100%;
+  box-shadow: #2196f31a;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  border-radius: 16px;
+  border-top: 4px solid var(--btn-dark-blue-color);
+  padding: 48px 48px 72px 48px;
+  background-color: var(--bg-white-color);
+}
+.cards-container {
+  height: 312px;
+  margin: auto;
+  width: 1216px;
+  display: grid;
+  row-gap: 48px;
+  column-gap: 48px;
+  justify-content: space-between;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+}
+.icon-container {
+  width: 48px;
+  height: 48px;
+  border-radius: 9999px;
+  background-color: #2196f31a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+i {
+  color: var(--btn-dark-blue-color);
+  opacity: 1 !important;
+}
+.card-title {
+  padding-top: 12px;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+  font-family: "Anybody", sans-serif;
+  color: var(--text-dark-color);
+}
+.description {
+  font-weight: 400;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 16px;
+  color: var(--text-gray-color);
+  line-height: 24px;
+}
+
+.features-section {
+  height: 472px;
+  vertical-align: middle;
 }
