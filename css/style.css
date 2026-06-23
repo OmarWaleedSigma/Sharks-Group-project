@@ -18,7 +18,11 @@
   --btn-dark-blue-color: #0061a4;
   --border-dark-blue-color: #00468c;
 }
+
 /* ^ Global Styles -----------------------------------------*/
+html,body{
+  overflow-x: clip;
+}
 body {
   background-color: var(--bg-light-gray-color);
 }
