@@ -503,6 +503,8 @@ h4 {
   max-width: 320px;
   opacity: 0.7;
 }
+.footer .desc {
+  width: 168.8px;
 .footer-description p {
   height: 96px;
   opacity: 1;

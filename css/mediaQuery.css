@@ -1,0 +1,298 @@
+/** Tablet */
+@media (max-width: 991px) {
+  .hero-browse-courses {
+    padding: 14px 35px;
+    font-size: 12px;
+    border-bottom: 3px solid #00468c;
+  }
+  .hero .main-h {
+    font-size: 50px;
+  }
+  .hero .info {
+    font-size: 16px;
+  }
+  .hero-watch-free-lesson {
+    padding: 14px 35px;
+    font-size: 14px;
+  }
+  /* & Features Section Styles-------------------------------------*/
+
+  .feature {
+    height: 100%;
+    width: 100%;
+    align-items: center;
+  }
+  .cards-container {
+    height: 312px;
+    width: 95%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .features-section {
+    height: 600px;
+    vertical-align: middle;
+    margin-bottom: 100px;
+  }
+  /* *Popular Courses Section Styles ---------------------------------------*/
+  .popular-header {
+    margin-bottom: 25px;
+    margin-left: 30px;
+  }
+  .popular-title {
+    font-size: 35px;
+  }
+  .intro {
+    font-size: 14px;
+  }
+  .popular-courses {
+    margin-top: 30px;
+    padding: 20px 24px;
+    background-color: var(--bg-gray-color);
+    margin-bottom: 70px;
+  }
+  .full-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .courses-container {
+    width: 95%;
+    display: grid;
+    gap: 5%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    height: 850px;
+  }
+  .course {
+    height: 90%;
+    box-shadow: 0px 8px 24px 0px rgba(33, 150, 243, 0.08);
+  }
+  .course-img {
+    border-radius: 16px 16px 0 0;
+  }
+  .course-info {
+    padding: 24px;
+    justify-content: center;
+  }
+  .course-title {
+    font-size: 22px;
+  }
+  .course-description {
+    font-size: 14px;
+  }
+  .course-price {
+    font-size: 22px;
+  }
+  .course-enroll {
+    height: 42px;
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+  .price-and-enroll {
+    border-radius: 16px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--bg-white-color);
+  }
+  /* ~ How It Works Section Styles ------------------------------------------------*/
+  .how-it-works .titles .title {
+    font-size: 35px;
+  }
+  .how-it-works {
+    align-items: center;
+    width: 100%;
+    height: 750px;
+    opacity: 1;
+    top: 1660px;
+    padding: 80px 32px;
+    background-color: #e3f2fd;
+  }
+  .how-it-works .titles .brief-description {
+    font-size: 14px;
+  }
+  .h4-margin {
+    padding-bottom: 12px;
+    height: 44px;
+  }
+  h4 {
+    font-size: 22px;
+    height: 32px;
+  }
+  .step-description {
+    font-size: 14px;
+  }
+  .steps {
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 50px;
+    column-gap: 50px;
+  }
+  .step {
+    margin-top: 100px;
+  }
+  /* @ Testimonials Section Styles  --------------------------------------------*/
+  .success-stories {
+    background-color: var(--bg-light-gray-color);
+    width: 90%;
+    height: 524px;
+    top: 2168px;
+    opacity: 1;
+    padding: 80px 70px;
+  }
+  .success-title {
+    width: 800px;
+    font-size: 30px;
+  }
+  .stories {
+    display: flex;
+    justify-content: space-between;
+    width: 120%;
+    gap: 5%;
+    height: 236px;
+    opacity: 1;
+  }
+  .student {
+    width: 424px;
+    height: 236px;
+    padding: 0 37px 37px 37px;
+  }
+  .st-txt {
+    padding-top: 22px;
+    font-size: 14px;
+  }
+  .name-age {
+    margin-top: 18px;
+    font-size: 12px;
+  }
+}
+/** Mobile */
+@media (max-width: 575px) {
+  .hero .main-h {
+    font-size: 45px;
+  }
+  .hero .info {
+    font-size: 12px;
+    padding: 0 8px;
+  }
+  .hero .buttons {
+    flex-direction: column;
+  }
+  /* & Features Section Styles-------------------------------------*/
+
+  .feature {
+    align-items: center;
+    gap: 8px;
+  }
+  .cards-container {
+    height: 900px;
+    width: 95%;
+    justify-content: space-between;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+  }
+  .card-title {
+    padding-top: 8px;
+    font-size: 22px;
+  }
+  .description {
+    font-size: 14px;
+  }
+
+  .features-section {
+    height: fit-content;
+  }
+  /* *Popular Courses Section Styles ---------------------------------------*/
+  .popular-header {
+    margin-bottom: 20px;
+    margin-left: 25px;
+  }
+  .popular-title {
+    font-size: 30px;
+  }
+  .popular-courses {
+    padding: 70px 20px;
+    background-color: var(--bg-gray-color);
+  }
+  .full-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .courses-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: fit-content;
+  }
+  /* ~ How It Works Section Styles ------------------------------------------------*/
+  .how-it-works .titles .title {
+    font-size: 30px;
+  }
+  .how-it-works {
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+    padding: 60px 20px;
+    background-color: #e3f2fd;
+  }
+  .how-it-works .titles .brief-description {
+    font-size: 14px;
+  }
+  .h4-margin {
+    padding-bottom: 12px;
+    height: 44px;
+  }
+  h4 {
+    font-size: 22px;
+    height: 27px;
+  }
+  .step-description {
+    font-size: 14px;
+  }
+  .steps {
+    display: grid;
+    justify-content: space-between;
+    width: 100%;
+    height: fit-content;
+    opacity: 1;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: 1fr;
+    row-gap: 80px;
+    column-gap: 80px;
+  }
+  /* @ Testimonials Section Styles  --------------------------------------------*/
+  .success-stories {
+    width: 95%;
+    height: fit-content;
+    padding: 50px 70px;
+  }
+  .success-title {
+    width: 350px;
+    font-size: 25px;
+  }
+  .stories {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+    height: fit-content;
+    gap: 20% !important;
+  }
+  .student {
+    width: 340px;
+    height: 236px;
+    opacity: 1;
+    gap: 24px;
+    border-radius: 16px;
+    padding: 0 24px 24px 24px;
+    background-color: var(--bg-light-color);
+  }
+  .st-txt {
+    font-size: 16px;
+  }
+  .name-age {
+    margin-top: 15px;
+    font-size: 14px;
+  }
+}
