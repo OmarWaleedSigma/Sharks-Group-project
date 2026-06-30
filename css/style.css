@@ -542,7 +542,7 @@ h4 {
   text-decoration: none;
   height: 24px;
   opacity: 0.7;
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: "Plus Jakarta Sans" , sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 16px;
@@ -551,7 +551,7 @@ h4 {
   vertical-align: middle;
   color: #ffffff;
 }
-.cols {
+.cols{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
