@@ -1,29 +1,5 @@
 /** Mobile Phones */
-:root {
-  --anybody-font: "Anybody", sans-serif;
-  --plus-jakarta-font: "Plus Jakarta Sans", sans-serif;
-  --primary-color: #005db7;
-  --text-dark-color: #011d35;
-  --text-light-color: #ffffff;
-  --text-blue-color: var(--primary-color);
-  --text-gray-color: #404752;
-  --icon-gray-color: #707883;
-  --bg-star-color: #eab308;
-  --bg-dark-blue-color: #1565c0;
-  --bg-medium-blue-color: #2196f3;
-  --bg-light-blue-color: #64b5f6;
-  --bg-unselected-blue-color: #ffffff1a;
-  --bg--light-blue-color: #e3f2fd;
-  --bg-light-color: #dbe9ff;
-  --bg-gray-color: #eef4ff;
-  --bg-white-color: #ffffff;
-  --bg-light-gray-color: #f8f9ff;
-  --btn-dark-blue-color: #0061a4;
-  --border-dark-blue-color: #00468c;
-  --border-gray-color: #ffffff33;
-  --border-light-gray-color: #bfc7d4;
-  --border-light-color: #e4efff;
-}
+
 @media (max-width: 575px) {
   nav {
     flex-direction: column;
@@ -58,9 +34,13 @@
     padding: 48px 0 40px 0;
   }
   .searchBar-container {
-    width: 100%;
+    width: 90%;
   }
   .edu-categories-container {
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin:0 auto;
+    width:90%;
     gap: 10px;
   }
   [name="selected"] {
@@ -142,11 +122,19 @@
     background-color: var(--btn-dark-blue-color);
   }
   /* ^ Newsletter Section Responsive Styling -----------------------------------------------------------*/
-
+  .main-content{
+      padding: 0 24px;
+  }
+  .main-content .info{
+    text-align:center;
+  }
   .main-content form {
     display: flex;
     flex-direction: column;
+    justify-content:center;
+    align-items:center;
     gap: 20px;
+    width:100%;
   }
   .main-content form input {
     width: 100%;
@@ -158,9 +146,14 @@
     line-height: 100%;
     color: #6b7280;
   }
+  .main-content form button{
+    font-size:20px;
+    width:fit-content;
+  }
   /* ^ Footer Cols Responsive Styling -----------------------------------------------------------*/
 
   .cols {
-    gap: 7%;
+    gap: 20px;
+    flex-direction: column;
   }
 }
