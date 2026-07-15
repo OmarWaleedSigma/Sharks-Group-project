@@ -539,3 +539,8 @@ h4 {
   vertical-align: middle;
   color: #ffffff;
 }
+.cols{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
