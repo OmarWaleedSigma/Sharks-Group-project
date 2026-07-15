@@ -3,8 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./assets/sharks_logo.jpg">
     <title>Sharks School</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/mediaQuery.css">
   </head>
   <body>
     <!-- ^ Navbar -->
@@ -207,6 +209,79 @@
       </div>
     </section>
 
+    <!-- ^ Pagination Section -->
+    <section class="pagination">
+      <ion-icon name="chevron-back-outline" class="prev"></ion-icon>
+      <button class="selected">1</button>
+      <button class="second">2</button>
+      <button class="third">3</button>
+      <ion-icon name="chevron-forward-outline" class="next"></ion-icon>
+    </section>
+
+    <!-- ^ Newsletter Section With waves decoration -->
+
+    <section class="newsletter">
+      <div class="top-waves-deco">
+        <img src="./assets/top-waves.png" />
+      </div>
+      <div class="main-content">
+        <h2 class="title">Stay in the Loop</h2>
+        <p class="info">
+          Get weekly updates on new courses, special discounts, and underwater
+          adventures delivered to your inbox.
+        </p>
+        <form>
+          <input
+            type="email"
+            class="email-inp"
+            placeholder="Enter your email"
+          />
+          <button type="submit" class="email-submit">Join the School</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ^ Footer Section -->
+    <footer class="footer">
+      <div class="cols">
+        <div class="col-1">
+          <div class="title-con">
+            <p class="footer-title">SHARK Online School</p>
+          </div>
+          <div class="footer-description">
+            <p class="desc">
+              Making learning an <br />
+              adventure for the next <br />
+              generation of creators <br />
+              and thinkers.
+            </p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="txt">
+            <p class="col-title">Explore</p>
+            <a class="link" href="#">Courses</a>
+            <a class="link" href="#">Pricing</a>
+            <a class="link" href="#">Curriculum</a>
+          </div>
+        </div>
+        <div class="col">
+          <div class="txt">
+            <p class="col-title">Company</p>
+            <a class="link" href="#">About</a>
+            <a class="link" href="#">Contact</a>
+            <a class="link" href="#">Careers</a>
+          </div>
+        </div>
+        <div class="col">
+          <div class="txt">
+            <p class="col-title">Legal</p>
+            <a class="link" href="#">Privacy <br />Policy </a>
+            <a class="link" href="#">Terms <br />Of <br />Sevice </a>
+          </div>
+        </div>
+      </div>
+    </footer>
     <!-- @ ionicons library init -->
     <script
       type="module"
