@@ -76,8 +76,15 @@
   .courses-grid {
     padding: 80px 12px;
   }
+  .cards-container{
+    display: flex;
+    flex-direction: column;
+  }
+  .row1, .row2{
+    flex-direction: column;
+  }
   .cards-container .card {
-    width: 30%;
+    width: 100%;
     border-radius: 16px;
     background-color: #fff;
     border: 1px solid var(--border-light-color);
@@ -95,8 +102,6 @@
     gap: -4px;
   }
   [name="star"] {
-    width: 15px;
-    height: 15px;
     color: var(--bg-star-color);
   }
   .rate {
@@ -126,12 +131,12 @@
   }
 
   .course-price {
-    font-size: 14px;
+    font-size: 24px;
   }
   .enroll-btn {
-    font-size: 14px;
+    font-size:24px;
 
-    padding: 8px 5px;
+    padding: 14px 12px;
     border-radius: 12px;
     border-bottom: 4px solid #003670;
     background-color: var(--btn-dark-blue-color);
