@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./assets/sharks_logo.jpg">
+    <title>Sharks School</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="../global.css">
+    <link rel="stylesheet" href="./css/mediaQuery.css">
+  </head>
+  <body>
+    <!-- ^ Navbar -->
+
+    <nav>
+      <div class="logo">
+        <div class="img-container">
+          <img src="assets/sharks_logo.jpg" alt="Sharks School Logo" />
+        </div>
+        <p class="logo-text">SHARKS Online School</p>
+      </div>
+      <ul class="nav-links">
+        <li class="courses-navlink"><a href="#">Courses</a></li>
+        <li class="inactives"><a href="../About/index.html">About</a></li>
+        <li class="inactives"><a href="#">Pricing</a></li>
+        <li class="inactives"><a href="#">Contact</a></li>
+      </ul>
+      <div class="cta">
+        <button type="button">Start Learning</button>
+      </div>
+    </nav>
+
+    <!-- ^ Hero Section -->
+    <section class="hero-section">
+      <h1 class="hero-title">Find Your Next Adventure</h1>
+      <div class="searchBar-container">
+        <ion-icon name="search-outline"></ion-icon>
+        <input
+          type="text"
+          name="SearchBar"
+          class="searchBar"
+          placeholder="What do you want to discover today?"
+        />
+      </div>
+      <div class="edu-categories-container">
+        <button name="selected">All Courses</button>
+        <button name="category">Coding</button>
+        <button name="category">Art</button>
+        <button name="category">Language</button>
+        <button name="category">Science</button>
+      </div>
+      <img
+        src="./assets/Wave Transition.png"
+        alt="waves deco"
+        class="waves-deco"
+      />
+    </section>
+
+    <!-- ^ Courses Grid Section -->
+    <section class="courses-grid">
+      <div class="cards-container">
+        <div class="row1">
+          <!-- ^ Card 1 -->
+          <div class="card">
+            <div class="course-img-container">
+              <img src="./assets/course1-img(courses-page).png" alt="" />
+            </div>
+            <div class="course-content">
+              <div class="course-rating">
+                <ion-icon name="star"></ion-icon>
+                <p class="rate">4.9</p>
+                <div class="num-con">
+                  <p class="people-num">(1.2k students)</p>
+                </div>
+              </div>
+              <h3 class="course-title">Ocean Explorer Coding</h3>
+              <p class="course-description">
+                Build your first interactive deep-sea game using JavaScript and
+                HTML5 canvas.
+              </p>
+              <div class="price-and-enroll">
+                <p class="course-price">$49.99</p>
+                <button class="enroll-btn">Enroll</button>
+              </div>
+            </div>
+          </div>
+          <!-- ^ Card 2 -->
+          <div class="card">
+            <div class="course-img-container">
+              <img src="./assets/course2-img.png" alt="" />
+            </div>
+            <div class="course-content">
+              <div class="course-rating">
+                <ion-icon name="star"></ion-icon>
+                <p class="rate">4.8</p>
+                <div class="num-con">
+                  <p class="people-num">(850 students)</p>
+                </div>
+              </div>
+              <h3 class="course-title">Digital Reef Painting</h3>
+              <p class="course-description">
+                Master the art of digital illustration by drawing vibrant coral
+                reefs and marine life.
+              </p>
+              <div class="price-and-enroll">
+                <p class="course-price">$35.00</p>
+                <button class="enroll-btn">Enroll</button>
+              </div>
+            </div>
+          </div>
+          <!-- ^ Card 3 -->
+          <div class="card">
+            <div class="course-img-container">
+              <img src="./assets/course3-img.png" alt="" />
+            </div>
+            <div class="course-content">
+              <div class="course-rating">
+                <ion-icon name="star"></ion-icon>
+                <p class="rate">5.0</p>
+                <div class="num-con">
+                  <p class="people-num">(2.4k students)</p>
+                </div>
+              </div>
+              <h3 class="course-title">Marine Biology 101</h3>
+              <p class="course-description">
+                Dive deep into the science of the ocean and learn about the
+                world's apex predators.
+              </p>
+              <div class="price-and-enroll">
+                <p class="course-price">$55.00</p>
+                <button class="enroll-btn">Enroll</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row2">
+          <!-- ^ Card 4 -->
+          <div class="card">
+            <div class="course-img-container">
+              <img src="./assets/course4-img.png" alt="" />
+            </div>
+            <div class="course-content">
+              <div class="course-rating">
+                <ion-icon name="star"></ion-icon>
+                <p class="rate">4.7</p>
+                <div class="num-con">
+                  <p class="people-num">(600 students)</p>
+                </div>
+              </div>
+              <h3 class="course-title">Shark Speak: English</h3>
+              <p class="course-description">
+                Learn English through interactive stories of underwater voyages
+                and hidden treasures.
+              </p>
+              <div class="price-and-enroll">
+                <p class="course-price">$40.00</p>
+                <button class="enroll-btn">Enroll</button>
+              </div>
+            </div>
+          </div>
+          <!-- ^ Card 5 -->
+          <div class="card">
+            <div class="course-img-container">
+              <img src="./assets/course5-img.png" alt="" />
+            </div>
+            <div class="course-content">
+              <div class="course-rating">
+                <ion-icon name="star"></ion-icon>
+                <p class="rate">4.9</p>
+                <div class="num-con">
+                  <p class="people-num">(3.1k students)</p>
+                </div>
+              </div>
+              <h3 class="course-title">Advanced Python Predator</h3>
+              <p class="course-description">
+                Take your coding skills to the next level by building complex
+                data visualization models.
+              </p>
+              <div class="price-and-enroll">
+                <p class="course-price">$65.00</p>
+                <button class="enroll-btn">Enroll</button>
+              </div>
+            </div>
+          </div>
+          <!-- ^ Card 6 -->
+          <div class="card">
+            <div class="course-img-container">
+              <img src="./assets/course6-img.png" alt="" class="course1-img" />
+            </div>
+            <div class="course-content">
+              <div class="course-rating">
+                <ion-icon name="star"></ion-icon>
+                <p class="rate">4.6</p>
+                <div class="num-con">
+                  <p class="people-num">(420 students)</p>
+                </div>
+              </div>
+              <h3 class="course-title">Climate Action Hero</h3>
+              <p class="course-description">
+                Learn how we can protect our oceans and become a leader in
+                global sustainability.
+              </p>
+              <div class="price-and-enroll">
+                <p class="course-price">$29.00</p>
+                <button class="enroll-btn">Enroll</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ^ Pagination Section -->
+    <section class="pagination">
+      <ion-icon name="chevron-back-outline" class="prev"></ion-icon>
+      <button class="selected">1</button>
+      <button class="unselected">2</button>
+      <button class="unselected">3</button>
+      <ion-icon name="chevron-forward-outline" class="next"></ion-icon>
+    </section>
+
+    <!-- ^ Newsletter Section With waves decoration -->
+
+    <section class="newsletter">
+      <div class="top-waves-deco">
+        <img src="./assets/top-waves.png" />
+      </div>
+      <div class="main-content">
+        <h2 class="title">Stay in the Loop</h2>
+        <p class="info">
+          Get weekly updates on new courses, special discounts, and underwater
+          adventures delivered to your inbox.
+        </p>
+        <form>
+          <input
+            type="email"
+            class="email-inp"
+            placeholder="Enter your email"
+          />
+          <button type="submit" class="email-submit">Join the School</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ^ Footer Section -->
+    <footer class="footer">
+      <div class="cols">
+        <div class="col-1">
+          <div class="title-con">
+            <p class="footer-title">SHARK Online School</p>
+          </div>
+          <div class="footer-description">
+            <p class="desc">
+              Making learning an <br />
+              adventure for the next <br />
+              generation of creators <br />
+              and thinkers.
+            </p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="txt">
+            <p class="col-title">Explore</p>
+            <a class="link" href="#">Courses</a>
+            <a class="link" href="#">Pricing</a>
+            <a class="link" href="#">Curriculum</a>
+          </div>
+        </div>
+        <div class="col">
+          <div class="txt">
+            <p class="col-title">Company</p>
+            <a class="link" href="#">About</a>
+            <a class="link" href="#">Contact</a>
+            <a class="link" href="#">Careers</a>
+          </div>
+        </div>
+        <div class="col">
+          <div class="txt">
+            <p class="col-title">Legal</p>
+            <a class="link" href="#">Privacy <br />Policy </a>
+            <a class="link" href="#">Terms <br />Of <br />Sevice </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- @ ionicons library init -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

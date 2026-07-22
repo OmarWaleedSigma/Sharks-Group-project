@@ -1,0 +1,166 @@
+/** Mobile Phones */
+:root {
+  --anybody-font: "Anybody", sans-serif;
+  --plus-jakarta-font: "Plus Jakarta Sans", sans-serif;
+  --primary-color: #005db7;
+  --text-dark-color: #011d35;
+  --text-light-color: #ffffff;
+  --text-blue-color: var(--primary-color);
+  --text-gray-color: #404752;
+  --icon-gray-color: #707883;
+  --bg-star-color: #eab308;
+  --bg-dark-blue-color: #1565c0;
+  --bg-medium-blue-color: #2196f3;
+  --bg-light-blue-color: #64b5f6;
+  --bg-unselected-blue-color: #ffffff1a;
+  --bg--light-blue-color: #e3f2fd;
+  --bg-light-color: #dbe9ff;
+  --bg-gray-color: #eef4ff;
+  --bg-white-color: #ffffff;
+  --bg-light-gray-color: #f8f9ff;
+  --btn-dark-blue-color: #0061a4;
+  --border-dark-blue-color: #00468c;
+  --border-gray-color: #ffffff33;
+  --border-light-gray-color: #bfc7d4;
+  --border-light-color: #e4efff;
+}
+@media (max-width: 575px) {
+  nav {
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 0;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .logo .logo-text {
+    font-size: 14px;
+    text-wrap: wrap;
+    font-weight: 900;
+  }
+  .nav-links {
+    font-family: var(--plus-jakarta-font);
+    font-weight: 900;
+    font-size: 18px;
+    justify-content: space-evenly;
+    gap: 30px;
+    padding-bottom: 20px;
+  }
+  nav .cta button {
+    padding: 12px 10px;
+  }
+  /* ^ Hero Section Responsive Styles ---------------------------------------------------- */
+
+  .hero-section {
+    padding: 48px 0 40px 0;
+  }
+  .searchBar-container {
+    width: 100%;
+  }
+  .edu-categories-container {
+    gap: 10px;
+  }
+  [name="selected"] {
+    padding: 10px 12px;
+    font-size: 12px;
+  }
+  [name="category"] {
+    font-size: 12px;
+    padding: 10px 12px;
+  }
+  /* ^ Courses Grid Sectoin Responsive Styling ------------------------------------------------------ */
+
+  .courses-grid {
+    padding: 80px 12px;
+  }
+  .cards-container{
+    display: flex;
+    flex-direction: column;
+  }
+  .row1, .row2{
+    flex-direction: column;
+  }
+  .cards-container .card {
+    width: 100%;
+    border-radius: 16px;
+    background-color: #fff;
+    border: 1px solid var(--border-light-color);
+    box-shadow: 0px 8px 10px -6px rgba(33, 150, 243, 0.1);
+  }
+  .cards-container .card img {
+    width: 100%;
+    height: 50%;
+    border-radius: 16px 16px 0px 0px;
+  }
+  .course-rating {
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+    gap: -4px;
+  }
+  [name="star"] {
+    color: var(--bg-star-color);
+  }
+  .rate {
+    font-size: 15px;
+  }
+  .people-num {
+    font-size: 12px;
+  }
+  .course-content {
+    padding: 24px;
+    gap: 10px;
+  }
+  .course-content .course-title {
+    font-size: 20px;
+  }
+  .course-content .course-description {
+    font-family: var(--plus-jakarta-font);
+    font-weight: 400;
+    font-size: 18px;
+    letter-spacing: 0px;
+    vertical-align: middle;
+    color: var(--text-gray-color);
+  }
+
+  .price-and-enroll {
+    padding-top: 10px;
+  }
+
+  .course-price {
+    font-size: 24px;
+  }
+  .enroll-btn {
+    font-size:24px;
+
+    padding: 14px 12px;
+    border-radius: 12px;
+    border-bottom: 4px solid #003670;
+    background-color: var(--btn-dark-blue-color);
+  }
+  /* ^ Newsletter Section Responsive Styling -----------------------------------------------------------*/
+
+  .main-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .main-content form input {
+    width: 100%;
+  }
+  .main-content form input::placeholder {
+    font-family: var(--plus-jakarta-font);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    color: #6b7280;
+  }
+  /* ^ Footer Cols Responsive Styling -----------------------------------------------------------*/
+
+  .cols {
+    gap: 7%;
+  }
+}
