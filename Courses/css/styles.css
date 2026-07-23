@@ -32,7 +32,7 @@
   background-color: var(--bg-white-color);
   align-self: center;
 }
-input{
+input {
   padding: 16.5px 24px 16.5px 48px;
   width: 100%;
   height: 100%;
@@ -46,7 +46,7 @@ input{
   color: var(--text-dark-color);
   outline: none;
 }
-input:focus{
+input:focus {
   border: 2px solid green;
 }
 ion-icon {
@@ -214,7 +214,7 @@ ion-icon {
   border-bottom: 4px solid #003670;
   background-color: var(--btn-dark-blue-color);
 }
-.enroll-btn:focus{
+.enroll-btn:hover {
   background-color: var(--bg-white-color);
   color: var(--btn-dark-blue-color);
 }
@@ -244,13 +244,15 @@ ion-icon {
   background-color: var(--btn-dark-blue-color);
   color: var(--text-light-color);
 }
-.pagination .selected:hover{
+.pagination .selected:hover {
   color: var(--btn-dark-blue-color);
   background-color: var(--bg-white-color);
 }
-.pagination .unselected:hover , .pagination .prev:hover , .pagination .next:hover{
-  background-color: var(--text-gray-color);
-  color: var(--bg-light-blue-color);
+.pagination .unselected:hover,
+.pagination .prev:hover,
+.pagination .next:hover {
+  background-color: var(--bg-star-color);
+  color: var(--text-dark-color);
 }
 .pagination ion-icon {
   font-size: large;
@@ -314,7 +316,7 @@ ion-icon {
   background-color: var(--bg-white-color);
   border: none;
 }
-.main-content form button:focus{
+.main-content form button:hover {
   background-color: var(--btn-dark-blue-color);
   color: var(--text-light-color);
 }
