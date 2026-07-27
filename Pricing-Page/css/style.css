@@ -1,13 +1,13 @@
 .content {
   background-color: var(--bg-light-gray-color);
   width: 100%;
-  padding: 80px 0 322px 0;
+  padding: 80px 32px 160px;
   gap: 80px;
 }
 /** hero section styles */
 
 .hero {
-  padding: 0 0 32px 32px;
+  padding: 0 0 48px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -22,7 +22,7 @@
   color: var(--btn-dark-blue-color);
 }
 .hero .subtext {
-  width: 50%;
+  width: min(680px, 100%);
   font-family: var(--plus-jakarta-font);
   font-weight: 500;
   font-size: 18px;
@@ -35,14 +35,17 @@
 
 /** Pricing Cards Section */
 .pricing-cards {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 5%;
+  width: min(1280px, 100%);
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 32px;
 }
 .card {
-  width: 30%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
   border-radius: 12px;
   padding: 48px;
   background-color: var(--bg-white-color);
@@ -70,7 +73,8 @@
 .card .pricing {
   position: relative;
   display: flex;
-  justify-content: space-between;
+  align-items: baseline;
+  gap: 6px;
   padding-bottom: 48px;
 }
 .card .price {
@@ -83,9 +87,7 @@
   color: var(--text-dark-color);
 }
 .card .duration {
-  position: absolute;
-  top: 30.5px;
-  left: 90%;
+  position: static;
   font-family: var(--plus-jakarta-font);
   font-weight: 400;
   font-size: 16px;
@@ -98,7 +100,7 @@
   display: flex;
   flex-direction: column;
   gap: 7.5px;
-  padding-bottom: 112px;
+  padding-bottom: 48px;
 }
 .feature-enabled,
 .feature-disabled {
@@ -126,7 +128,7 @@
   color: var(--icon-gray-color);
 }
 .get-started {
-  width: 80%;
+  width: 100%;
   background-color: var(--bg-white-color);
   padding: 24px 0;
   border-radius: 12px;
@@ -141,7 +143,7 @@
   color: var(--btn-dark-blue-color);
 }
 .card-elite-pass {
-    width: 30%;
+  width: 100%;
   box-shadow: 0px 16px 32px -8px #2196f31f;
   background-color: var(--btn-dark-blue-color);
   display: flex;
@@ -181,6 +183,9 @@
 }
 .other-content{
     padding: 48px;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
 }
 .elite-level {
   font-family: var(--plus-jakarta-font);
@@ -203,7 +208,8 @@
 .elite-pricing {
   position: relative;
   display: flex;
-  justify-content: space-between;
+  align-items: baseline;
+  gap: 6px;
   padding-bottom: 48px;
 }
 .elite-price {
@@ -216,9 +222,7 @@
   color: var(--text-light-color);
 }
 .elite-duration {
-  position: absolute;
-  top: 30.5px;
-  left: 90%;
+  position: static;
   font-family: var(--plus-jakarta-font);
   font-weight: 400;
   font-size: 16px;
@@ -226,12 +230,6 @@
   letter-spacing: 0px;
   vertical-align: middle;
   color: var(--text-light-color);
-}
-.features {
-  display: flex;
-  flex-direction: column;
-  gap: 7.5px;
-  padding-bottom: 112px;
 }
 .feature-elite {
   list-style: none;
@@ -247,4 +245,116 @@
   letter-spacing: 0px;
   vertical-align: middle;
   color: var(--text-light-color);
+}
+
+.card > .get-started,
+.other-content > .get-started {
+  margin-top: auto;
+}
+
+@media (max-width: 991px) {
+  .content {
+    padding: 64px 24px 120px;
+  }
+
+  .hero .title {
+    font-size: 48px;
+    line-height: 56px;
+    text-align: center;
+  }
+
+  .hero .subtext {
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  .pricing-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+  .card,
+  .other-content {
+    padding: 36px 28px;
+  }
+
+  .card-elite-pass {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    width: min(600px, 100%);
+    justify-self: center;
+  }
+
+  .features {
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 575px) {
+  .content {
+    padding: 48px 20px 80px;
+  }
+
+  .hero {
+    padding-bottom: 36px;
+  }
+
+  .hero .title {
+    font-size: 38px;
+    line-height: 46px;
+  }
+
+  .hero .subtext {
+    font-size: 15px;
+    line-height: 24px;
+  }
+
+  .pricing-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .card-elite-pass {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .card,
+  .other-content {
+    padding: 32px 24px;
+  }
+
+  .card .pass-name,
+  .elite-pass-title {
+    font-size: 34px;
+    line-height: 42px;
+  }
+
+  .card .price,
+  .elite-price {
+    font-size: 42px;
+    line-height: 60px;
+  }
+}
+
+@media (max-width: 420px) {
+  .content {
+    padding-inline: 16px;
+  }
+
+  .hero .title {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .card,
+  .other-content {
+    padding: 28px 20px;
+  }
+
+  .feature-name,
+  .feature-disabled-name,
+  .elite-feature-name {
+    font-size: 14px;
+    line-height: 22px;
+  }
 }

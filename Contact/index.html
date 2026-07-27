@@ -42,19 +42,19 @@
           type="button"
           aria-label="Toggle navigation menu"
           aria-expanded="false"
-          aria-controls="courses-mobile-menu"
+          aria-controls="contact-mobile-menu"
         >
           <span></span>
           <span></span>
           <span></span>
         </button>
       </div>
-      <div class="mobile-menu" id="courses-mobile-menu">
+      <div class="mobile-menu" id="contact-mobile-menu">
         <ul class="nav-links">
-          <li class="courses-navlink"><a href="#">Courses</a></li>
+          <li class="inactives"><a href="../Courses/index.html">Courses</a></li>
           <li class="inactives"><a href="../About/index.html">About</a></li>
-          <li class="inactives"><a href="#">Pricing</a></li>
-          <li class="inactives"><a href="#">Contact</a></li>
+          <li class="inactives"><a href="../Pricing-Page/index.html">Pricing</a></li>
+          <li class="active"><a href="#">Contact</a></li>
         </ul>
         <div class="cta">
           <button type="button">Start Learning</button>
@@ -98,13 +98,12 @@
             </div>
             <div class="input-container">
               <label for="message-input">Message</label>
-              <input
-                type="text"
+              <textarea
                 class="message-input"
                 id="message-input"
                 placeholder="How can we help you thrive in the deep blue?"
                 required
-              />
+              ></textarea>
             </div>
             <button type="submit" class="submit-form">Send Message <img src="./assets/send-message-icon.png" alt=""></button>
           </form>
@@ -114,7 +113,7 @@
             <div class="deco-img"><img src="./assets/Decorative Image.png" alt=""></div>
         </div>
       </section>
-      <img src="./assets/Wave Divider.png" class="ending-waves">
+      <img src="./assets/Wave Divider.png" class="ending-waves" alt="" />
     </main>
     <!-- ^ Footer -->
     <footer class="footer">

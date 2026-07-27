@@ -1,5 +1,4 @@
 main {
-  padding-top: 80px;
   background-color: var(--bg--light-blue-color);
 }
 .hero {
@@ -23,7 +22,7 @@ main {
   color: var(--btn-dark-blue-color);
 }
 .hero .info {
-  width: 40%;
+  width: min(680px, 100%);
   font-family: var(--plus-jakarta-font);
   font-weight: 500;
   font-size: 18px;
@@ -34,22 +33,20 @@ main {
   color: var(--text-gray-color);
 }
 
-/** Main content */
-
-main {
-  padding-top: 80px;
-}
-
 /** Contact Form */
 
 .main-content {
-  padding: 0px 32px 368px 32px;
+  width: min(1240px, 100%);
+  margin-inline: auto;
+  padding: 0 32px 160px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 48px;
 }
 .contact-form-container {
-  width: 100%;
+  flex: 1 1 55%;
+  min-width: 0;
   background-color: var(--bg-white-color);
   padding-top: 48px;
   padding-right: 48px;
@@ -60,7 +57,7 @@ main {
   box-shadow: 0px 16px 32px 0px #2196f31a;
 }
 form {
-  width: 97%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -71,17 +68,29 @@ form {
   gap: 4px;
 }
 .name-input,
-.email-input {
+.email-input,
+.message-input {
+  width: 100%;
   padding: 11.5px 24px;
   border-radius: 8px;
   border: 2px solid #c4dcfd;
+  outline: none;
+  font-family: var(--plus-jakarta-font);
+  font-size: 16px;
+  color: var(--text-dark-color);
+  transition: border-color 180ms ease, box-shadow 180ms ease;
 }
 .message-input {
-  padding: 12px 24px 108px 24px;
-  border-radius: 8px;
-  border-width: 2px;
-  border: 2px solid #c4dcfd;
+  min-height: 144px;
+  padding: 16px 24px;
+  resize: vertical;
   background-color: var(--text-light-color);
+}
+.name-input:focus,
+.email-input:focus,
+.message-input:focus {
+  border-color: var(--bg-medium-blue-color);
+  box-shadow: 0 0 0 4px rgba(33, 150, 243, 0.14);
 }
 label {
   font-family: var(--plus-jakarta-font);
@@ -114,8 +123,114 @@ label {
   vertical-align: middle;
 }
 
+.school-details {
+  flex: 1 1 45%;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.school-details img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.contact-details,
+.deco-img {
+  width: 100%;
+  max-width: 503px;
+}
+
 /* * Waves Deco  */
 
 .ending-waves {
+  display: block;
   width: 100%;
+  height: auto;
+}
+
+@media (max-width: 991px) {
+  .hero {
+    padding: 64px 24px 40px;
+  }
+
+  .hero .title {
+    font-size: 48px;
+    line-height: 56px;
+  }
+
+  .hero .info {
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  .main-content {
+    align-items: stretch;
+    gap: 32px;
+    padding: 0 24px 120px;
+  }
+
+  .contact-form-container {
+    padding: 40px 32px 48px;
+  }
+}
+
+@media (max-width: 575px) {
+  .hero {
+    padding: 48px 20px 32px;
+  }
+
+  .hero .title {
+    font-size: 38px;
+    line-height: 46px;
+  }
+
+  .hero .info {
+    font-size: 15px;
+    line-height: 24px;
+  }
+
+  .main-content {
+    flex-direction: column;
+    padding: 0 20px 80px;
+  }
+
+  .contact-form-container {
+    width: 100%;
+    padding: 32px 20px 40px;
+  }
+
+  .contact-form .submit-form {
+    width: 100%;
+    padding: 18px 24px;
+  }
+
+  .school-details {
+    width: 100%;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero,
+  .main-content {
+    padding-inline: 16px;
+  }
+
+  .hero .title {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .contact-form-container {
+    padding: 28px 16px 32px;
+  }
+
+  .name-input,
+  .email-input,
+  .message-input {
+    padding-inline: 16px;
+  }
 }
