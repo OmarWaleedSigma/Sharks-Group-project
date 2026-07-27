@@ -67,6 +67,15 @@ nav {
   line-height: 32px;
   color: var(--text-light-color);
 }
+.logo .logo-text a{
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 900;
+  font-family: var(--anybody-font);
+  font-style: italic;
+  line-height: 32px;
+  color: var(--text-light-color);
+}
 .nav-links {
   font-family: var(--plus-jakarta-font);
   font-weight: 700;
@@ -98,6 +107,79 @@ nav .cta button {
   background: var(--bg-medium-blue-color);
   color: var(--text-light-color);
   border: none;
+}
+
+/* Mobile navigation is activated at the mobile breakpoint below. */
+.mobile-nav {
+  display: none;
+}
+
+.mobile-nav-bar {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.mobile-menu-toggle {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  flex: 0 0 44px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 0;
+  border: 1px solid var(--border-gray-color);
+  border-radius: 10px;
+  background-color: var(--bg-unselected-blue-color);
+  cursor: pointer;
+}
+
+.mobile-menu-toggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  border-radius: 9999px;
+  background-color: var(--text-light-color);
+}
+
+.mobile-menu {
+  display: none;
+  width: 100%;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 20px;
+  padding-top: 20px;
+}
+
+/* JavaScript can add this class later to expand the mobile menu. */
+.mobile-nav.is-open .mobile-menu {
+  display: flex;
+}
+
+.mobile-nav .nav-links {
+  width: 100%;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0;
+  padding: 0;
+}
+
+.mobile-nav .nav-links li a {
+  display: block;
+  padding: 12px 4px;
+}
+
+.mobile-nav .cta,
+.mobile-nav .cta button {
+  width: 100%;
+}
+
+.mobile-nav .cta button {
+  padding: 12px 20px;
 }
 
 /* @ Footer Section Styles --------------------------------------------------------------*/
@@ -178,6 +260,23 @@ nav .cta button {
 /* ^ Media Queries */
 
 @media (max-width: 575px){
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 12px 16px;
+  }
+
+  .mobile-nav .logo .logo-text {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
   /* footer respnsive */
 
   .cols{

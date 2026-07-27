@@ -10,21 +10,53 @@
   <body>
     <!-- ^ Navbar -->
 
-    <nav>
+    <nav class="desktop-nav" aria-label="Main navigation">
       <div class="logo">
         <div class="img-container">
           <img src="../assets/sharks_logo.jpg" alt="Sharks School Logo" />
         </div>
-        <p class="logo-text">SHARKS Online School</p>
+        <p class="logo-text"><a href="../index.html">SHARKS Online School</a></p>
       </div>
       <ul class="nav-links">
         <li class="inactives"><a href="../Courses/index.html">Courses</a></li>
         <li class="active"><a href="#">About</a></li>
-        <li class="inactives"><a href="#">Pricing</a></li>
-        <li class="inactives"><a href="#">Contact</a></li>
+        <li class="inactives"><a href="../Pricing-Page/index.html">Pricing</a></li>
+        <li class="inactives"><a href="../Contact/index.html">Contact</a></li>
       </ul>
       <div class="cta">
         <button type="button">Start Learning</button>
+      </div>
+    </nav>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <div class="mobile-nav-bar">
+        <div class="logo">
+          <div class="img-container">
+            <img src="../assets/sharks_logo.jpg" alt="Sharks School Logo" />
+          </div>
+          <p class="logo-text">SHARKS Online School</p>
+        </div>
+        <button
+          class="mobile-menu-toggle"
+          type="button"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+          aria-controls="about-mobile-menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      <div class="mobile-menu" id="about-mobile-menu">
+        <ul class="nav-links">
+          <li class="inactives"><a href="../Courses/index.html">Courses</a></li>
+          <li class="active"><a href="#">About</a></li>
+          <li class="inactives"><a href="#">Pricing</a></li>
+          <li class="inactives"><a href="#">Contact</a></li>
+        </ul>
+        <div class="cta">
+          <button type="button">Start Learning</button>
+        </div>
       </div>
     </nav>
 

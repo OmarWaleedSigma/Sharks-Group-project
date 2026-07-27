@@ -8,14 +8,30 @@
   width: 100%;
   height: 100%;
   display: flex;
+  align-items: center;
+  gap: 32px;
 }
 .main-container {
   display: flex;
   flex-direction: column;
   gap: 24px;
+  flex: 1 1 55%;
+  min-width: 0;
+}
+.organizer > .img-container {
+  flex: 1 1 45%;
+  min-width: 0;
+  align-self: flex-end;
+}
+.hero-image {
+  display: block;
+  width: 100%;
+  max-width: 635px;
+  height: auto;
+  margin-inline: auto;
 }
 .hero-section .hero-title {
-  width: 60%;
+  width: 100%;
   text-wrap: wrap;
   font-family: var(--anybody-font);
   font-weight: 800;
@@ -24,7 +40,8 @@
   color: var(--text-light-color);
 }
 .main-container .about-us {
-  width: 70%;
+  width: 100%;
+  max-width: 720px;
   text-wrap: wrap;
   font-family: var(--plus-jakarta-font);
   color: white;
@@ -34,7 +51,7 @@
 }
 .main-container .dive-in-btn {
   padding: 24px 48px;
-  width: 30%;
+  width: fit-content;
   border-radius: 12px;
   border: none;
   border-bottom: 4px solid var(--border-dark-blue-color);
@@ -49,11 +66,14 @@
 }
 .waves-decoration-container {
   width: 100%;
+  height: 60px;
   position: relative;
 }
 .waves-decoration-container .waves-deco {
   position: absolute;
   width: 100%;
+  height: 100%;
+  object-fit: cover;
   bottom: 0;
 }
 
@@ -87,6 +107,15 @@
   display: grid;
   grid-template-rows: repeat(1, 1fr);
   grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  margin-top: 32px;
+}
+.tr-img img {
+  display: block;
+  width: 100%;
+  max-width: 192px;
+  height: auto;
+  margin-inline: auto;
 }
 .tr-info {
   align-items: center;
@@ -123,6 +152,8 @@
 .top-section {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  gap: 24px;
 }
 .top-section .main-elements .title {
   color: var(--btn-dark-blue-color);
@@ -143,6 +174,7 @@
   justify-content: space-between;
   align-items: center;
   gap: 48px;
+  margin-top: 40px;
 }
 .value {
   background-color: #ffffffcc;
@@ -154,6 +186,8 @@
   flex-direction: column;
   gap: 12px;
   padding: 48px;
+  flex: 1 1 0;
+  min-width: 0;
 }
 .value-name {
   color: var(--btn-dark-blue-color);
@@ -197,12 +231,14 @@
   font-size: 40px;
   line-height: 48px;
 }
-.call-to-action .content .description {
+.call-to-action .content .description,
+.call-to-action .content .info {
   font-family: var(--plus-jakarta-font);
   color: var(--text-gray-color);
   font-weight: 500;
   font-size: 18px;
   line-height: 28px;
+  text-align: center;
 }
 .call-to-action .content .btns{
   display: flex;
@@ -232,4 +268,263 @@
   font-size: 14px;
   line-height: 20px;
   color: var(--btn-dark-blue-color);
+}
+
+/* ^ Tablet ----------------------------------------------------------------- */
+
+@media (max-width: 991px) {
+  nav {
+    padding-inline: 16px;
+  }
+
+  .nav-links {
+    gap: 24px;
+  }
+
+  .logo .logo-text {
+    font-size: 18px;
+  }
+
+  .organizer {
+    padding: 64px 24px 0;
+    gap: 24px;
+  }
+
+  .hero-section .hero-title {
+    font-size: 48px;
+    line-height: 56px;
+  }
+
+  .main-container .about-us {
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  .main-container .dive-in-btn {
+    padding: 18px 36px;
+  }
+
+  .our-crew,
+  .our-values {
+    padding: 64px 24px;
+  }
+
+  .teachers-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 48px;
+  }
+
+  .section-text .title,
+  .top-section .main-elements .title,
+  .call-to-action .content .title {
+    font-size: 35px;
+    line-height: 44px;
+  }
+
+  .values-grid {
+    gap: 24px;
+  }
+
+  .value {
+    padding: 32px 24px;
+  }
+
+  .call-to-action {
+    padding: 64px 48px;
+  }
+
+  .footer {
+    padding: 64px 24px 24px;
+  }
+}
+
+/** Mobile */
+@media (max-width: 575px) {
+  nav {
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+  }
+
+  .logo .logo-text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px 24px;
+    font-size: 14px;
+  }
+
+  nav .cta button {
+    padding: 12px 20px;
+  }
+
+  .organizer {
+    flex-direction: column;
+    padding: 48px 20px 0;
+    text-align: center;
+  }
+
+  .main-container {
+    align-items: center;
+  }
+
+  .hero-section .hero-title {
+    font-size: 38px;
+    line-height: 46px;
+  }
+
+  .main-container .about-us {
+    font-size: 15px;
+    line-height: 24px;
+  }
+
+  .main-container .dive-in-btn {
+    width: 100%;
+    max-width: 320px;
+    padding: 16px 24px;
+  }
+
+  .organizer > .img-container {
+    width: 100%;
+    max-width: 420px;
+    align-self: center;
+  }
+
+  .waves-decoration-container {
+    height: 36px;
+  }
+
+  .our-crew,
+  .our-values {
+    padding: 56px 20px;
+  }
+
+  .section-text .title,
+  .top-section .main-elements .title,
+  .call-to-action .content .title {
+    font-size: 30px;
+    line-height: 38px;
+  }
+
+  .section-text .about-our-crew,
+  .top-section .main-elements .info,
+  .call-to-action .content .info {
+    font-size: 15px;
+    line-height: 24px;
+  }
+
+  .teachers-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .tr-exp {
+    max-width: 420px;
+    margin-inline: auto;
+  }
+
+  .top-section {
+    align-items: flex-start;
+  }
+
+  .floating-elements-container {
+    flex: 0 0 auto;
+  }
+
+  .floating-boat-element {
+    width: 42px;
+    height: auto;
+  }
+
+  .values-grid {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 24px;
+    margin-top: 32px;
+  }
+
+  .value {
+    padding: 32px 24px;
+  }
+
+  .call-to-action {
+    padding: 56px 20px;
+    text-align: center;
+  }
+
+  .call-to-action .content .btns {
+    width: 100%;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .call-to-action .content .btns button {
+    width: 100%;
+  }
+
+  .footer {
+    padding: 48px 20px 24px;
+  }
+
+  .cols {
+    flex-wrap: wrap;
+    gap: 32px 24px;
+  }
+
+  .col-1 {
+    flex: 0 0 100%;
+  }
+
+  .col {
+    flex: 1 1 90px;
+  }
+}
+
+@media (max-width: 420px) {
+  .organizer {
+    padding-inline: 16px;
+  }
+
+  .hero-section .hero-title {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .our-crew,
+  .our-values,
+  .call-to-action {
+    padding-inline: 16px;
+  }
+
+  .top-section {
+    gap: 12px;
+  }
+
+  .value {
+    border-radius: 24px;
+    padding: 28px 20px;
+  }
+
+  .call-to-action .content .btns .view-all,
+  .call-to-action .content .btns button:last-child {
+    padding: 18px 24px;
+  }
+
+  .nav-links {
+    gap: 12px 16px;
+  }
+
+  .cols {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .col-1 {
+    grid-column: 1 / -1;
+  }
 }
