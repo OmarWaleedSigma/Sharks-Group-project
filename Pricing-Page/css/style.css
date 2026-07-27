@@ -158,8 +158,26 @@
     flex-direction: column;
     align-items: flex-end;
 }
-.best-value-and-gradient svg{
+.best-value-and-gradient .gradient{
     border-radius: 12px 12px 0 0 ;
+    width: 100%;
+    height: 8px;
+    background: linear-gradient(90deg, #64A1FF 0%, #FFFFFF 50%, #64A1FF 100%);
+
+}
+.best-value-and-gradient .badge-cont{
+  padding: 8px 10px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.best-value-and-gradient .badge-cont .badge{
+  padding: 8px 15px;
+  border-radius: 9999px;
+  background-color: #64A1FF;
+  color: #003670;
+  box-shadow: 0px 1px 2px 0px #0000000D;
+
 }
 .other-content{
     padding: 48px;
@@ -207,7 +225,7 @@
   line-height: 24px;
   letter-spacing: 0px;
   vertical-align: middle;
-  color: #00497d;
+  color: var(--text-light-color);
 }
 .features {
   display: flex;

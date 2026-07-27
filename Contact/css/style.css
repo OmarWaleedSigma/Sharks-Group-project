@@ -93,11 +93,12 @@ label {
   color: var(--text-dark-color);
 }
 .contact-form .submit-form {
+  width: fit-content;
   display: flex;
   justify-content: center;
   align-items: center;
   border: none;
-  padding: 0 80px;
+  padding: 20px 80px;
   gap: 12px;
   border-radius: 9999px;
   background-color: var(--btn-dark-blue-color);
