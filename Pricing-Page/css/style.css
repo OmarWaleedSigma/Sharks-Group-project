@@ -1,4 +1,5 @@
 .content {
+  background-color: var(--bg-light-gray-color);
   width: 100%;
   padding: 80px 0 322px 0;
   gap: 80px;
@@ -6,8 +7,7 @@
 /** hero section styles */
 
 .hero {
-  /* width: 100%; */
-  padding: 0 32px;
+  padding: 0 0 32px 32px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -31,4 +31,202 @@
   text-align: center;
   color: var(--text-gray-color);
   align-self: center;
+}
+
+/** Pricing Cards Section */
+.pricing-cards {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+}
+.card {
+  width: 30%;
+  border-radius: 12px;
+  padding: 48px;
+  background-color: var(--bg-white-color);
+  border: 2px solid #00000000;
+  box-shadow: 0px 16px 32px -8px #2196f31f;
+}
+.card .level {
+  font-family: var(--plus-jakarta-font);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  color: var(--btn-dark-blue-color);
+}
+.card .pass-name {
+  font-family: var(--anybody-font);
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: 0px;
+  vertical-align: middle;
+  color: var(--text-dark-color);
+}
+.card .pricing {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 48px;
+}
+.card .price {
+  font-family: var(--anybody-font);
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 72px;
+  letter-spacing: 0px;
+  vertical-align: middle;
+  color: var(--text-dark-color);
+}
+.card .duration {
+  position: absolute;
+  top: 30.5px;
+  left: 90%;
+  font-family: var(--plus-jakarta-font);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0px;
+  vertical-align: middle;
+  color: var(--text-gray-color);
+}
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 7.5px;
+  padding-bottom: 112px;
+}
+.feature-enabled,
+.feature-disabled {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+}
+.feature-name {
+  font-family: var(--plus-jakarta-font);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0px;
+  vertical-align: middle;
+  color: var(--text-dark-color);
+}
+.feature-disabled-name {
+  font-family: var(--plus-jakarta-font);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0px;
+  vertical-align: middle;
+  color: var(--icon-gray-color);
+}
+.get-started {
+  width: 80%;
+  background-color: var(--bg-white-color);
+  padding: 24px 0;
+  border-radius: 12px;
+  border: 2px solid var(--btn-dark-blue-color);
+  font-family: var(--plus-jakarta-font);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.28px;
+  text-align: center;
+  vertical-align: middle;
+  color: var(--btn-dark-blue-color);
+}
+.card-elite-pass {
+    width: 30%;
+  box-shadow: 0px 16px 32px -8px #2196f31f;
+  background-color: var(--btn-dark-blue-color);
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  border: 2px solid var(--btn-dark-blue-color);
+  gap: 1.1px;
+}
+.best-value-and-gradient{
+    gap: 6px;
+    padding-top: 4px;
+    padding: 0 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.best-value-and-gradient svg{
+    border-radius: 12px 12px 0 0 ;
+}
+.other-content{
+    padding: 48px;
+}
+.elite-level {
+  font-family: var(--plus-jakarta-font);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 1.4px;
+  vertical-align: middle;
+  color: #d6e3ff;
+}
+.elite-pass-title {
+  font-family: var(--anybody-font);
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: 0px;
+  vertical-align: middle;
+  color: var(--text-light-color);
+}
+.elite-pricing {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 48px;
+}
+.elite-price {
+  font-family: var(--anybody-font);
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 72px;
+  letter-spacing: 0px;
+  vertical-align: middle;
+  color: var(--text-light-color);
+}
+.elite-duration {
+  position: absolute;
+  top: 30.5px;
+  left: 90%;
+  font-family: var(--plus-jakarta-font);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0px;
+  vertical-align: middle;
+  color: #00497d;
+}
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 7.5px;
+  padding-bottom: 112px;
+}
+.feature-elite {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+}
+.elite-feature-name {
+  font-family: var(--plus-jakarta-font);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0px;
+  vertical-align: middle;
+  color: var(--text-light-color);
 }
