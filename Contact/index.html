@@ -3,159 +3,187 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sharks School</title>
+    <meta
+      name="description"
+      content="Contact SHARKS Online School for help with your learning journey."
+    />
+    <link rel="icon" type="image/jpeg" href="../assets/sharks_logo.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,400;0,700;0,800;1,900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="../global.css" />
     <link rel="stylesheet" href="./css/style.css" />
+    <title>Contact | SHARKS Online School</title>
   </head>
   <body>
-    <nav class="desktop-nav" aria-label="Main navigation">
-      <div class="logo">
-        <div class="img-container">
-          <img src="assets/sharks_logo.jpg" alt="Sharks School Logo" />
-        </div>
-        <p class="logo-text">
-          <a href="../index.html">SHARKS Online School</a>
-        </p>
-      </div>
-      <ul class="nav-links">
-        <li class="inactives"><a href="../Courses/index.html">Courses</a></li>
-        <li class="inactives"><a href="../About/index.html">About</a></li>
-        <li class="inactives">
-          <a href="../Pricing-Page/index.html">Pricing</a>
-        </li>
-        <li class="active"><a href="#">Contact</a></li>
-      </ul>
-      <div class="cta">
-        <button type="button">Start Learning</button>
-      </div>
-    </nav>
-    <nav class="mobile-nav" aria-label="Mobile navigation">
-      <div class="mobile-nav-bar">
-        <div class="logo">
-          <div class="img-container">
-            <img src="assets/sharks_logo.jpg" alt="Sharks School Logo" />
-          </div>
-          <p class="logo-text">SHARKS Online School</p>
-        </div>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+      <nav class="site-nav container" aria-label="Primary navigation">
+        <a class="site-brand" href="../index.html">
+          <img
+            class="site-brand__logo"
+            src="../assets/sharks_logo.jpg"
+            alt=""
+            width="50"
+            height="50"
+          />
+          <span class="site-brand__name">SHARKS Online School</span>
+        </a>
         <button
-          class="mobile-menu-toggle"
+          class="site-nav__toggle"
           type="button"
-          aria-label="Toggle navigation menu"
           aria-expanded="false"
-          aria-controls="courses-mobile-menu"
+          aria-controls="primary-navigation"
+          aria-label="Open navigation menu"
         >
-          <span></span>
-          <span></span>
-          <span></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
         </button>
-      </div>
-      <div class="mobile-menu" id="courses-mobile-menu">
-        <ul class="nav-links">
-          <li class="courses-navlink"><a href="#">Courses</a></li>
-          <li class="inactives"><a href="../About/index.html">About</a></li>
-          <li class="inactives"><a href="#">Pricing</a></li>
-          <li class="inactives"><a href="#">Contact</a></li>
-        </ul>
-        <div class="cta">
-          <button type="button">Start Learning</button>
+        <div class="site-nav__menu" id="primary-navigation">
+          <ul class="site-nav__links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../Courses/index.html">Courses</a></li>
+            <li><a href="../About/index.html">About</a></li>
+            <li><a href="../Pricing-Page/index.html">Pricing</a></li>
+            <li>
+              <a href="./index.html" aria-current="page">Contact</a>
+            </li>
+          </ul>
+          <a class="button button--nav" href="../Courses/index.html">
+            Start Learning
+          </a>
         </div>
-      </div>
-    </nav>
-    <main>
-      <!-- ^ Hero Section -->
-      <section class="hero">
-        <h1 class="title">Ready to Make a Splash? Get in Touch!</h1>
-        <p class="info">
+      </nav>
+    </header>
+
+    <main id="main-content" class="contact-page">
+      <section class="contact-hero container">
+        <h1 class="page-title">Ready to Make a Splash? Get in Touch!</h1>
+        <p>
           Have a question about our underwater academy? Whether you're a curious
           minnow or a hungry shark, we're here to help you navigate your
           learning journey.
         </p>
       </section>
 
-      <!-- ^ Main Content Grid -->
-      <section class="main-content">
-        <div class="contact-form-container">
-          <form class="contact-form">
-            <div class="input-container">
+      <section class="contact-section container">
+        <div class="contact-form-card">
+          <h2 class="visually-hidden">Send us a message</h2>
+          <form class="contact-form" aria-describedby="form-status">
+            <div class="contact-form__field">
               <label for="name-input">Your Name</label>
               <input
-                type="text"
-                class="name-input"
                 id="name-input"
+                type="text"
+                name="name"
+                autocomplete="name"
                 placeholder="Finley Sharkington"
                 required
               />
             </div>
-            <div class="input-container">
+            <div class="contact-form__field">
               <label for="email-input">Email Address</label>
               <input
-                type="email"
-                class="email-input"
                 id="email-input"
+                type="email"
+                name="email"
+                autocomplete="email"
                 placeholder="finley@ocean.com"
                 required
               />
             </div>
-            <div class="input-container">
+            <div class="contact-form__field">
               <label for="message-input">Message</label>
-              <input
-                type="text"
-                class="message-input"
+              <textarea
                 id="message-input"
+                name="message"
+                rows="6"
                 placeholder="How can we help you thrive in the deep blue?"
                 required
-              />
+              ></textarea>
             </div>
-            <button type="submit" class="submit-form">Send Message <img src="./assets/send-message-icon.png" alt=""></button>
+            <p class="contact-form__status" id="form-status">
+              Demo form — online submission is not connected yet.
+            </p>
+            <button class="button button--primary submit-form" type="submit">
+              Send Message
+              <img
+                src="./assets/send-message-icon.png"
+                alt=""
+                width="19"
+                height="16"
+              />
+            </button>
           </form>
         </div>
         <div class="school-details">
-            <div class="contact-details"><img src="./assets/Contact Info Card.png" alt=""></div>
-            <div class="deco-img"><img src="./assets/Decorative Image.png" alt=""></div>
+          <h2 class="visually-hidden">School contact information</h2>
+          <img
+            class="contact-details"
+            src="./assets/Contact Info Card.png"
+            alt="SHARKS Online School contact information"
+            width="503"
+            height="292"
+            loading="lazy"
+          />
+          <img
+            class="contact-decoration"
+            src="./assets/Decorative Image.png"
+            alt=""
+            width="489"
+            height="210"
+            loading="lazy"
+            aria-hidden="true"
+          />
         </div>
       </section>
-      <img src="./assets/Wave Divider.png" class="ending-waves">
+      <img
+        class="contact-wave"
+        src="./assets/Wave Divider.png"
+        alt=""
+        width="1280"
+        height="150"
+        aria-hidden="true"
+      />
     </main>
-    <!-- ^ Footer -->
+
     <footer class="footer">
-      <div class="cols">
-        <div class="col-1">
-          <div class="title-con">
-            <p class="footer-title">SHARK Online School</p>
-          </div>
-          <div class="footer-description">
-            <p class="desc">
-              Making learning an <br />
-              adventure for the next <br />
-              generation of creators <br />
-              and thinkers.
-            </p>
-          </div>
+      <div class="footer__grid container">
+        <div class="footer__brand">
+          <p class="footer__title">SHARKS Online School</p>
+          <p class="footer__description">
+            Making learning an adventure for the next generation of creators
+            and thinkers.
+          </p>
         </div>
-        <div class="col">
-          <div class="txt">
-            <p class="col-title">Explore</p>
-            <a class="link" href="#">Courses</a>
-            <a class="link" href="#">Pricing</a>
-            <a class="link" href="#">Curriculum</a>
-          </div>
+        <div class="footer__group">
+          <p class="footer__heading">Explore</p>
+          <a class="footer__link" href="../Courses/index.html">Courses</a>
+          <a class="footer__link" href="../Pricing-Page/index.html">Pricing</a>
+          <span class="footer__unavailable" aria-disabled="true">Curriculum</span>
         </div>
-        <div class="col">
-          <div class="txt">
-            <p class="col-title">Company</p>
-            <a class="link" href="#">About</a>
-            <a class="link" href="#">Contact</a>
-            <a class="link" href="#">Careers</a>
-          </div>
+        <div class="footer__group">
+          <p class="footer__heading">Company</p>
+          <a class="footer__link" href="../About/index.html">About</a>
+          <a class="footer__link" href="./index.html">Contact</a>
+          <span class="footer__unavailable" aria-disabled="true">Careers</span>
         </div>
-        <div class="col">
-          <div class="txt">
-            <p class="col-title">Legal</p>
-            <a class="link" href="#">Privacy <br />Policy </a>
-            <a class="link" href="#">Terms <br />Of <br />Sevice </a>
-          </div>
+        <div class="footer__group">
+          <p class="footer__heading">Legal</p>
+          <span class="footer__unavailable" aria-disabled="true">
+            Privacy Policy
+          </span>
+          <span class="footer__unavailable" aria-disabled="true">
+            Terms of Service
+          </span>
         </div>
       </div>
     </footer>
+    <script src="../js/navigation.js" defer></script>
   </body>
 </html>
