@@ -3,218 +3,272 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sharks School</title>
+    <meta
+      name="description"
+      content="Choose a SHARKS Online School learning plan."
+    />
+    <link rel="icon" type="image/jpeg" href="../assets/sharks_logo.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,400;0,700;0,800;1,900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="../global.css" />
     <link rel="stylesheet" href="./css/style.css" />
+    <title>Pricing | SHARKS Online School</title>
   </head>
   <body>
-    <!-- ^ NavBars -->
-    <nav class="desktop-nav" aria-label="Main navigation">
-      <div class="logo">
-        <div class="img-container">
-          <img src="../assets/sharks_logo.jpg" alt="Sharks School Logo" />
-        </div>
-        <p class="logo-text">
-          <a href="../index.html">SHARKS Online School</a>
-        </p>
-      </div>
-      <ul class="nav-links">
-        <li class="inactives"><a href="../Courses/index.html">Courses</a></li>
-        <li class="inactives"><a href="../About/index.html">About</a></li>
-        <li class="active"><a href="#">Pricing</a></li>
-        <li class="inactives"><a href="../Contact/index.html">Contact</a></li>
-      </ul>
-      <div class="cta">
-        <button type="button">Start Learning</button>
-      </div>
-    </nav>
-    <nav class="mobile-nav" aria-label="Mobile navigation">
-      <div class="mobile-nav-bar">
-        <div class="logo">
-          <div class="img-container">
-            <img src="../assets/sharks_logo.jpg" alt="Sharks School Logo" />
-          </div>
-          <p class="logo-text">SHARKS Online School</p>
-        </div>
-        <button
-          class="mobile-menu-toggle"
-          type="button"
-          aria-label="Toggle navigation menu"
-          aria-expanded="false"
-          aria-controls="pricing-mobile-menu"
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </div>
-      <div class="mobile-menu" id="pricing-mobile-menu">
-        <ul class="nav-links">
-          <li class="inactives"><a href="../Courses/index.html">Courses</a></li>
-          <li class="inactives"><a href="../About/index.html">About</a></li>
-          <li class="active"><a href="#">Pricing</a></li>
-          <li class="inactives"><a href="../Contact/index.html">Contact</a></li>
-        </ul>
-        <div class="cta">
-          <button type="button">Start Learning</button>
-        </div>
-      </div>
-    </nav>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
 
-    <main class="content">
-      <!-- ^ hero section -->
-      <section class="hero">
-        <h1 class="title">Choose Your Learning Path</h1>
-        <p class="subtext">
+    <header class="site-header">
+      <nav class="site-nav container" aria-label="Primary navigation">
+        <a class="site-brand" href="../index.html">
+          <img
+            class="site-brand__logo"
+            src="../assets/sharks_logo.jpg"
+            alt=""
+            width="50"
+            height="50"
+          />
+          <span class="site-brand__name">SHARKS Online School</span>
+        </a>
+        <button
+          class="site-nav__toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="primary-navigation"
+          aria-label="Open navigation menu"
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </button>
+        <div class="site-nav__menu" id="primary-navigation">
+          <ul class="site-nav__links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../Courses/index.html">Courses</a></li>
+            <li><a href="../About/index.html">About</a></li>
+            <li>
+              <a href="./index.html" aria-current="page">Pricing</a>
+            </li>
+            <li><a href="../Contact/index.html">Contact</a></li>
+          </ul>
+          <a class="button button--nav" href="../Courses/index.html">
+            Start Learning
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main-content" class="pricing-page">
+      <section class="pricing-hero container">
+        <h1 class="page-title">Choose Your Learning Path</h1>
+        <p>
           Dive into our ocean of knowledge. Whether you're just dipping your
           toes or ready to become an apex predator in your field, we have a plan
           for you.
         </p>
       </section>
 
-      <!-- ^ Pricing Cards Section -->
-      <section class="pricing-cards">
-        <div class="card">
-          <div class="headings">
-            <p class="level">ENTRY LEVEL</p>
-            <h3 class="pass-name">Basic</h3>
-          </div>
-          <div class="pricing">
-            <p class="price">$0</p>
-            <p class="duration">/forever</p>
-          </div>
-          <ul class="features">
-            <li class="feature-enabled">
-              <img src="assets/feature-enabled.png" alt="" />
-              <p class="feature-name">Access to introductory courses</p>
-            </li>
-            <li class="feature-enabled">
-              <img src="./assets/feature-enabled.png" alt="" />
-              <p class="feature-name">Community forum access</p>
-            </li>
-            <li class="feature-enabled">
-              <img src="./assets/feature-enabled.png" alt="" />
-              <p class="feature-name">Mobile app learning</p>
-            </li>
-            <li class="feature-disabled">
-              <img src="./assets/feature-disabled.png" alt="" />
-              <p class="feature-disabled-name">Certified Diplomas</p>
-            </li>
-          </ul>
-          <button class="get-started">Get Started</button>
-        </div>
-        <div class="card-elite-pass">
-          <div class="best-value-and-gradient">
-            <div class="gradient"></div>
-            <div class="badge-cont">
-              <div class="badge">Best Value</div>
-            </div>
-          </div>
-          <div class="other-content">
-            <div class="headings">
-              <p class="elite-level">YEARLY PASS</p>
-              <h3 class="elite-pass-title">Elite</h3>
-            </div>
-            <div class="elite-pricing">
-              <p class="elite-price">$299</p>
-              <p class="elite-duration">/year</p>
-            </div>
-            <ul class="features">
-              <li class="feature-elite">
-                <img src="assets/Elite-feature.png" alt="" />
-                <p class="elite-feature-name">Access to all courses</p>
+      <section class="pricing-section container" aria-labelledby="plans-title">
+        <h2 class="visually-hidden" id="plans-title">Learning plans</h2>
+        <div class="pricing-grid">
+          <article class="plan-card plan-card--basic">
+            <p class="plan-card__eyebrow">Entry Level</p>
+            <h3>Basic</h3>
+            <p class="plan-card__price">
+              <strong>$0</strong><span>/forever</span>
+            </p>
+            <ul class="plan-features">
+              <li>
+                <img
+                  src="./assets/feature-enabled.png"
+                  alt=""
+                  width="20"
+                  height="20"
+                />
+                <span>Access to introductory courses</span>
               </li>
-              <li class="feature-elite">
-                <img src="./assets/Elite-feature.png" alt="" />
-                <p class="elite-feature-name">Certified Diplomas</p>
+              <li>
+                <img
+                  src="./assets/feature-enabled.png"
+                  alt=""
+                  width="20"
+                  height="20"
+                />
+                <span>Community forum access</span>
               </li>
-              <li class="feature-elite">
-                <img src="./assets/Elite-feature.png" alt="" />
-                <p class="elite-feature-name">1-on-1 Mentorship</p>
+              <li>
+                <img
+                  src="./assets/feature-enabled.png"
+                  alt=""
+                  width="20"
+                  height="20"
+                />
+                <span>Mobile app learning</span>
               </li>
-              <li class="feature-elite">
-                <img src="./assets/Elite-feature.png" alt="" />
-                <p class="elite-feature-name">Offline learning downloads</p>
-              </li>
-              <li class="feature-elite">
-                <img src="./assets/Elite-feature.png" alt="" />
-                <p class="elite-feature-name">Exclusive Masterclasses</p>
+              <li class="is-disabled">
+                <img
+                  src="./assets/feature-disabled.png"
+                  alt=""
+                  width="20"
+                  height="20"
+                />
+                <span><span class="visually-hidden">Not included: </span>Certified Diplomas</span>
               </li>
             </ul>
-            <button class="get-started">Get Started</button>
-          </div>
-        </div>
-        <div class="card">
-          <div class="headings">
-            <p class="level">MONTHLY EXPLORER</p>
-            <h3 class="pass-name">Pro</h3>
-          </div>
-          <div class="pricing">
-            <p class="price">$29</p>
-            <p class="duration">/month</p>
-          </div>
-          <ul class="features">
-            <li class="feature-enabled">
-              <img src="assets/feature-enabled.png" alt="" />
-              <p class="feature-name">Access to all courses</p>
-            </li>
-            <li class="feature-enabled">
-              <img src="./assets/feature-enabled.png" alt="" />
-              <p class="feature-name">Certified Diplomas</p>
-            </li>
-            <li class="feature-enabled">
-              <img src="./assets/feature-enabled.png" alt="" />
-              <p class="feature-name">Live Q&A Sessions</p>
-            </li>
-            <li class="feature-disabled">
-              <img src="./assets/feature-disabled.png" alt="" />
-              <p class="feature-disabled-name">1-on-1 Mentorship</p>
-            </li>
-          </ul>
-          <button class="get-started">Get Started</button>
+            <a class="button plan-card__button" href="../Courses/index.html">
+              Get Started
+            </a>
+          </article>
+
+          <article class="plan-card plan-card--elite">
+            <div class="plan-card__accent" aria-hidden="true"></div>
+            <p class="plan-card__badge">Best Value</p>
+            <div class="plan-card__inner">
+              <p class="plan-card__eyebrow">Yearly Pass</p>
+              <h3>Elite</h3>
+              <p class="plan-card__price">
+                <strong>$299</strong><span>/year</span>
+              </p>
+              <ul class="plan-features">
+                <li>
+                  <img
+                    src="./assets/Elite-feature.png"
+                    alt=""
+                    width="24"
+                    height="23"
+                  />
+                  <span>Access to all courses</span>
+                </li>
+                <li>
+                  <img
+                    src="./assets/Elite-feature.png"
+                    alt=""
+                    width="24"
+                    height="23"
+                  />
+                  <span>Certified Diplomas</span>
+                </li>
+                <li>
+                  <img
+                    src="./assets/Elite-feature.png"
+                    alt=""
+                    width="24"
+                    height="23"
+                  />
+                  <span>1-on-1 Mentorship</span>
+                </li>
+                <li>
+                  <img
+                    src="./assets/Elite-feature.png"
+                    alt=""
+                    width="24"
+                    height="23"
+                  />
+                  <span>Offline learning downloads</span>
+                </li>
+                <li>
+                  <img
+                    src="./assets/Elite-feature.png"
+                    alt=""
+                    width="24"
+                    height="23"
+                  />
+                  <span>Exclusive Masterclasses</span>
+                </li>
+              </ul>
+              <a class="button plan-card__button" href="../Courses/index.html">
+                Get Started
+              </a>
+            </div>
+          </article>
+
+          <article class="plan-card plan-card--pro">
+            <p class="plan-card__eyebrow">Monthly Explorer</p>
+            <h3>Pro</h3>
+            <p class="plan-card__price">
+              <strong>$29</strong><span>/month</span>
+            </p>
+            <ul class="plan-features">
+              <li>
+                <img
+                  src="./assets/feature-enabled.png"
+                  alt=""
+                  width="20"
+                  height="20"
+                />
+                <span>Access to all courses</span>
+              </li>
+              <li>
+                <img
+                  src="./assets/feature-enabled.png"
+                  alt=""
+                  width="20"
+                  height="20"
+                />
+                <span>Certified Diplomas</span>
+              </li>
+              <li>
+                <img
+                  src="./assets/feature-enabled.png"
+                  alt=""
+                  width="20"
+                  height="20"
+                />
+                <span>Live Q&amp;A Sessions</span>
+              </li>
+              <li class="is-disabled">
+                <img
+                  src="./assets/feature-disabled.png"
+                  alt=""
+                  width="20"
+                  height="20"
+                />
+                <span><span class="visually-hidden">Not included: </span>1-on-1 Mentorship</span>
+              </li>
+            </ul>
+            <a class="button plan-card__button" href="../Courses/index.html">
+              Get Started
+            </a>
+          </article>
         </div>
       </section>
     </main>
-    <!-- ^ Footer -->
+
     <footer class="footer">
-      <div class="cols">
-        <div class="col-1">
-          <div class="title-con">
-            <p class="footer-title">SHARK Online School</p>
-          </div>
-          <div class="footer-description">
-            <p class="desc">
-              Making learning an <br />
-              adventure for the next <br />
-              generation of creators <br />
-              and thinkers.
-            </p>
-          </div>
+      <div class="footer__grid container">
+        <div class="footer__brand">
+          <p class="footer__title">SHARKS Online School</p>
+          <p class="footer__description">
+            Making learning an adventure for the next generation of creators
+            and thinkers.
+          </p>
         </div>
-        <div class="col">
-          <div class="txt">
-            <p class="col-title">Explore</p>
-            <a class="link" href="#">Courses</a>
-            <a class="link" href="#">Pricing</a>
-            <a class="link" href="#">Curriculum</a>
-          </div>
+        <div class="footer__group">
+          <p class="footer__heading">Explore</p>
+          <a class="footer__link" href="../Courses/index.html">Courses</a>
+          <a class="footer__link" href="./index.html">Pricing</a>
+          <span class="footer__unavailable" aria-disabled="true">Curriculum</span>
         </div>
-        <div class="col">
-          <div class="txt">
-            <p class="col-title">Company</p>
-            <a class="link" href="#">About</a>
-            <a class="link" href="#">Contact</a>
-            <a class="link" href="#">Careers</a>
-          </div>
+        <div class="footer__group">
+          <p class="footer__heading">Company</p>
+          <a class="footer__link" href="../About/index.html">About</a>
+          <a class="footer__link" href="../Contact/index.html">Contact</a>
+          <span class="footer__unavailable" aria-disabled="true">Careers</span>
         </div>
-        <div class="col">
-          <div class="txt">
-            <p class="col-title">Legal</p>
-            <a class="link" href="#">Privacy <br />Policy </a>
-            <a class="link" href="#">Terms <br />Of <br />Sevice </a>
-          </div>
+        <div class="footer__group">
+          <p class="footer__heading">Legal</p>
+          <span class="footer__unavailable" aria-disabled="true">
+            Privacy Policy
+          </span>
+          <span class="footer__unavailable" aria-disabled="true">
+            Terms of Service
+          </span>
         </div>
       </div>
     </footer>
+    <script src="../js/navigation.js" defer></script>
   </body>
 </html>
