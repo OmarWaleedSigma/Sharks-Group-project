@@ -84,7 +84,7 @@
 
 .teacher {
   min-width: 0;
-  padding: 1.25rem;
+  padding: 40px;
   border-radius: var(--radius-lg);
 }
 

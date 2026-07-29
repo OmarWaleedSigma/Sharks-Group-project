@@ -182,7 +182,7 @@
   font-weight: 700;
 }
 
-.pagination button[aria-current="page"] {
+.pagination .current{
   border-color: var(--btn-dark-blue-color);
   background: var(--btn-dark-blue-color);
   color: var(--text-light-color);
@@ -248,9 +248,9 @@
   }
 
   .pagination button:hover {
-    border-color: var(--bg-star-color);
-    background: var(--bg-star-color);
-    color: var(--text-dark-color);
+    border-color: var(--btn-dark-blue-color);
+    background: var(--btn-dark-blue-color);
+    color: var(--text-light-color);
   }
 }
 

@@ -75,10 +75,6 @@
   box-shadow: 0 0 0 4px rgb(33 150 243 / 14%);
 }
 
-.contact-form__status {
-  color: var(--text-gray-color);
-  font-size: 0.875rem;
-}
 
 .submit-form {
   align-self: flex-start;
