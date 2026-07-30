@@ -1,8 +1,8 @@
 import { HomePage } from "./pages/HomePage.js";
-// import { CoursesPage } from "./pages/CoursesPage.js";
-// import { AboutPage } from "./pages/AboutPage.js";
-// import { PricingPage } from "./pages/PricingPage.js";
-// import { ContactPage } from "./pages/ContactPage.js";
+import { CoursesPage } from "./pages/CoursesPage.js";
+import { AboutPage } from "./pages/AboutPage.js";
+import { PricingPage } from "./pages/PricingPage.js";
+import { ContactPage } from "./pages/ContactPage.js";
 import { NotFoundPage } from "./pages/NotFoundPage.js";
 
 // كل مسار مرتبط بصفحة وعنوان
@@ -12,25 +12,25 @@ const routes = {
     render: HomePage,
   },
 
-//   "/courses": {
-//     title: "Courses | SHARKS Online School",
-//     render: CoursesPage,
-//   },
+  "/courses": {
+    title: "Courses | SHARKS Online School",
+    render: CoursesPage,
+  },
 
-//   "/about": {
-//     title: "About | SHARKS Online School",
-//     render: AboutPage,
-//   },
+  "/about": {
+    title: "About | SHARKS Online School",
+    render: AboutPage,
+  },
 
-//   "/pricing": {
-//     title: "Pricing | SHARKS Online School",
-//     render: PricingPage,
-//   },
+  "/pricing": {
+    title: "Pricing | SHARKS Online School",
+    render: PricingPage,
+  },
 
-//   "/contact": {
-//     title: "Contact | SHARKS Online School",
-//     render: ContactPage,
-//   },
+  "/contact": {
+    title: "Contact | SHARKS Online School",
+    render: ContactPage,
+  },
 };
 
 function getCurrentRoute() {

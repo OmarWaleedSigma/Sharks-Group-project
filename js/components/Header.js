@@ -26,10 +26,10 @@ export function Header() {
         <div class="site-nav__menu" id="primary-navigation">
           <ul class="site-nav__links">
             <li><a href="#/" data-route="/" aria-current="page">Home</a></li>
-            <li><a href="./Courses/index.html">Courses</a></li>
-            <li><a href="./About/index.html">About</a></li>
-            <li><a href="./Pricing-Page/index.html">Pricing</a></li>
-            <li><a href="./Contact/index.html">Contact</a></li>
+            <li><a href="#/courses" data-route="/courses">Courses</a></li>
+            <li><a href="#/about" data-route="/about">About</a></li>
+            <li><a href="#/pricing" data-route="/pricing">Pricing</a></li>
+            <li><a href="#/contact" data-route="/contact">Contact</a></li>
           </ul>
           <a class="button button--nav" href="./Courses/index.html">
             Start Learning
