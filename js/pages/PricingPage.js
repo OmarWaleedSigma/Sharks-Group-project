@@ -1,5 +1,6 @@
-export function PricingPage(){
-    return `
+export function PricingPage() {
+  return `
+    <section class="pricing-page">
       <section class="pricing-hero container">
         <h1 class="page-title">Choose Your Learning Path</h1>
         <p>
@@ -172,6 +173,7 @@ export function PricingPage(){
             </a>
           </article>
         </div>
+        </section>
       </section>
-    `
+    `;
 }

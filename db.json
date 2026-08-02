@@ -1,0 +1,313 @@
+{
+  "homeFeatures": [
+    {
+      "id": "1",
+      "order": 1,
+      "icon": "◎",
+      "title": "Focused Learning",
+      "description": "Our bite-sized lessons keep kids engaged and on track to master new skills effectively."
+    },
+    {
+      "id": "2",
+      "order": 2,
+      "icon": "✦",
+      "title": "Gamified Experience",
+      "description": "Earn badges and points while learning. Education has never felt more like an adventure."
+    },
+    {
+      "id": "3",
+      "order": 3,
+      "icon": "▯",
+      "title": "Learn Anywhere",
+      "description": "Our mobile-first platform allows students to learn on tablets or phones during their commute or at home."
+    }
+  ],
+  "popularCourses": [
+    {
+      "id": "1",
+      "order": 1,
+      "title": "Web Design Basics",
+      "description": "Learn to build your first website with HTML and CSS.",
+      "price": 49,
+      "currency": "$",
+      "image": "/assets/Background.png"
+    },
+    {
+      "id": "2",
+      "order": 2,
+      "title": "Creative Drawing",
+      "description": "Unlock your imagination through digital art techniques.",
+      "price": 39,
+      "currency": "$",
+      "image": "/assets/Background (1).png"
+    },
+    {
+      "id": "3",
+      "order": 3,
+      "title": "English for Kids",
+      "description": "Engaging stories and games to learn English naturally.",
+      "price": 59,
+      "currency": "$",
+      "image": "/assets/Background (2).png"
+    }
+  ],
+  "successStories": [
+    {
+      "id": "1",
+      "order": 1,
+      "studentName": "Leo",
+      "age": 14,
+      "avatarText": "L",
+      "quote": "The coding course helped me build my first game. The lessons made every challenge feel possible."
+    },
+    {
+      "id": "2",
+      "order": 2,
+      "studentName": "Sarah",
+      "age": 11,
+      "avatarText": "S",
+      "quote": "I love learning at my own pace, and every new badge makes me excited to keep exploring."
+    }
+  ],
+  "categories": [
+    {
+      "id": "all",
+      "order": 1,
+      "label": "All Courses"
+    },
+    {
+      "id": "coding",
+      "order": 2,
+      "label": "Coding"
+    },
+    {
+      "id": "art",
+      "order": 3,
+      "label": "Art"
+    },
+    {
+      "id": "language",
+      "order": 4,
+      "label": "Language"
+    },
+    {
+      "id": "science",
+      "order": 5,
+      "label": "Science"
+    }
+  ],
+  "courses": [
+    {
+      "id": "1",
+      "order": 1,
+      "title": "Ocean Explorer Coding",
+      "description": "Learn the basics of coding through exciting underwater challenges.",
+      "category": "coding",
+      "rating": 4.9,
+      "students": 120,
+      "price": 49,
+      "currency": "$",
+      "image": "/assets/course1-img(courses-page).png"
+    },
+    {
+      "id": "2",
+      "order": 2,
+      "title": "Digital Reef Painting",
+      "description": "Create colorful ocean worlds while learning digital painting techniques.",
+      "category": "art",
+      "rating": 4.8,
+      "students": 98,
+      "price": 39,
+      "currency": "$",
+      "image": "/assets/course2-img.png"
+    },
+    {
+      "id": "3",
+      "order": 3,
+      "title": "Marine Biology 101",
+      "description": "Discover fascinating sea creatures and the ecosystems they call home.",
+      "category": "science",
+      "rating": 4.9,
+      "students": 145,
+      "price": 59,
+      "currency": "$",
+      "image": "/assets/course3-img.png"
+    },
+    {
+      "id": "4",
+      "order": 4,
+      "title": "Shark Speak: English",
+      "description": "Grow vocabulary and confidence with stories, games, and conversation.",
+      "category": "language",
+      "rating": 4.7,
+      "students": 87,
+      "price": 45,
+      "currency": "$",
+      "image": "/assets/course4-img.png"
+    },
+    {
+      "id": "5",
+      "order": 5,
+      "title": "Advanced Python Predator",
+      "description": "Build larger Python projects and sharpen problem-solving skills.",
+      "category": "coding",
+      "rating": 4.9,
+      "students": 112,
+      "price": 69,
+      "currency": "$",
+      "image": "/assets/course5-img.png"
+    },
+    {
+      "id": "6",
+      "order": 6,
+      "title": "Climate Action Hero",
+      "description": "Explore climate science and design a project that protects our planet.",
+      "category": "science",
+      "rating": 4.8,
+      "students": 104,
+      "price": 55,
+      "currency": "$",
+      "image": "/assets/course6-img.png"
+    }
+  ],
+  "crew": [
+    {
+      "id": "1",
+      "order": 1,
+      "name": "Captain Sarah",
+      "role": "Marine Biology Lead",
+      "bio": "Sarah has spent 15 years studying the deep blue and loves sharing oceanic secrets with curious minds.",
+      "image": "/assets/CaptainSarah.png"
+    },
+    {
+      "id": "2",
+      "order": 2,
+      "name": "Dr. Finn",
+      "role": "Tech & Robotics",
+      "bio": "Finn builds underwater drones and teaches students how to code their way through any challenge.",
+      "image": "/assets/Dr. Finn.png"
+    },
+    {
+      "id": "3",
+      "order": 3,
+      "name": "Navigator Julia",
+      "role": "Creative Design",
+      "bio": "Julia helps students map out their imagination, turning digital sketches into interactive worlds.",
+      "image": "/assets/Navigator Julia.png"
+    },
+    {
+      "id": "4",
+      "order": 4,
+      "name": "Professor Ray",
+      "role": "History & Ethics",
+      "bio": "Ray explores the history of navigation and ensures every student learns the value of safe travels.",
+      "image": "/assets/Prof. Ray.png"
+    }
+  ],
+  "pricingPlans": [
+    {
+      "id": "basic",
+      "order": 1,
+      "name": "Basic",
+      "identifier": "basic",
+      "eyebrow": "Entry Level",
+      "price": 0,
+      "currency": "$",
+      "duration": "/forever",
+      "featured": false,
+      "features": [
+        {
+          "label": "Access to introductory courses",
+          "included": true
+        },
+        {
+          "label": "Community forum access",
+          "included": true
+        },
+        {
+          "label": "Mobile app learning",
+          "included": true
+        },
+        {
+          "label": "Certified Diplomas",
+          "included": false
+        }
+      ]
+    },
+    {
+      "id": "elite",
+      "order": 2,
+      "name": "Elite",
+      "identifier": "elite",
+      "eyebrow": "Yearly Pass",
+      "price": 299,
+      "currency": "$",
+      "duration": "/year",
+      "featured": true,
+      "badge": "Best Value",
+      "features": [
+        {
+          "label": "Access to all courses",
+          "included": true
+        },
+        {
+          "label": "Certified Diplomas",
+          "included": true
+        },
+        {
+          "label": "1-on-1 Mentorship",
+          "included": true
+        },
+        {
+          "label": "Offline learning downloads",
+          "included": true
+        },
+        {
+          "label": "Exclusive Masterclasses",
+          "included": true
+        }
+      ]
+    },
+    {
+      "id": "pro",
+      "order": 3,
+      "name": "Pro",
+      "identifier": "pro",
+      "eyebrow": "Monthly Explorer",
+      "price": 29,
+      "currency": "$",
+      "duration": "/month",
+      "featured": false,
+      "features": [
+        {
+          "label": "Access to all courses",
+          "included": true
+        },
+        {
+          "label": "Certified Diplomas",
+          "included": true
+        },
+        {
+          "label": "Live Q&A Sessions",
+          "included": true
+        },
+        {
+          "label": "1-on-1 Mentorship",
+          "included": false
+        }
+      ]
+    }
+  ],
+  "contactInfo": [
+    {
+      "id": "1",
+      "email": "hello@sharksschool.com",
+      "phone": "+1 (555) 010-2026",
+      "address": "The Digital Ocean, Learning Harbor",
+      "hours": "Monday–Friday, 9:00 AM–5:00 PM"
+    }
+  ],
+  "contactMessages": [],
+  "newsletterSubscriptions": [],
+  "$schema": "./node_modules/json-server/schema.json"
+}

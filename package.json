@@ -1,0 +1,12 @@
+{
+  "name": "sharks-school-spa",
+  "version": "1.0.0",
+  "private": true,
+  "description": "SHARKS Online School vanilla JavaScript SPA with JSON Server",
+  "scripts": {
+    "api": "json-server db.json --port 3000"
+  },
+  "devDependencies": {
+    "json-server": "^1.0.0-beta.3"
+  }
+}
