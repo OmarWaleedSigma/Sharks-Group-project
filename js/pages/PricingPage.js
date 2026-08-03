@@ -57,7 +57,7 @@ export function PricingPage() {
                 <span><span class="visually-hidden">Not included: </span>Certified Diplomas</span>
               </li>
             </ul>
-            <a class="button plan-card__button" href="../Courses/index.html">
+            <a class="button plan-card__button" href="#/courses">
               Get Started
             </a>
           </article>
@@ -118,7 +118,7 @@ export function PricingPage() {
                   <span>Exclusive Masterclasses</span>
                 </li>
               </ul>
-              <a class="button plan-card__button" href="../Courses/index.html">
+              <a class="button plan-card__button" href="#/courses">
                 Get Started
               </a>
             </div>
@@ -168,7 +168,7 @@ export function PricingPage() {
                 <span><span class="visually-hidden">Not included: </span>1-on-1 Mentorship</span>
               </li>
             </ul>
-            <a class="button plan-card__button" href="../Courses/index.html">
+            <a class="button plan-card__button" href="#/courses">
               Get Started
             </a>
           </article>

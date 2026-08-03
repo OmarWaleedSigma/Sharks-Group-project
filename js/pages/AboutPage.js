@@ -13,7 +13,7 @@ export function AboutPage() {
               that guides every young learner to greatness. Our curriculum
               isn't just about facts; it's about the journey of discovery.
             </p>
-            <a class="button about-hero__button" href="../Courses/index.html">
+            <a class="button about-hero__button" href="#/courses">
               Dive In Now
             </a>
           </div>
@@ -186,10 +186,10 @@ export function AboutPage() {
             the waves of knowledge.
           </p>
           <div class="about-cta__actions">
-            <a class="button button--primary" href="../Courses/index.html">
+            <a class="button button--primary" href="#/courses">
               View All Courses
             </a>
-            <a class="button button--outline" href="../Contact/index.html">
+            <a class="button button--outline" href="#/contact">
               Tour the Campus
             </a>
           </div>

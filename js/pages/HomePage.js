@@ -8,7 +8,7 @@ export function HomePage() {
             creativity and build future skills.
           </p>
           <div class="hero__actions">
-            <a class="button button--light" href="./Courses/index.html">
+            <a class="button button--light" href="#/courses">
               Browse Courses
             </a>
             <button class="button button--outline" type="button" disabled>
@@ -63,7 +63,7 @@ export function HomePage() {
               <h2 class="section-title">Popular Courses</h2>
               <p>Dive into our most loved classes by students worldwide.</p>
             </div>
-            <a class="text-link" href="./Courses/index.html">
+            <a class="text-link" href="#/courses">
               View All Courses <span aria-hidden="true">→</span>
             </a>
           </div>
@@ -81,7 +81,7 @@ export function HomePage() {
                 <p>Learn to build your first website with HTML and CSS.</p>
                 <div class="course__footer">
                   <strong>$49</strong>
-                  <a class="button button--primary" href="./Courses/index.html">
+                  <a class="button button--primary" href="#/courses">
                     Enroll Now
                   </a>
                 </div>
@@ -100,7 +100,7 @@ export function HomePage() {
                 <p>Unlock your imagination through digital art techniques.</p>
                 <div class="course__footer">
                   <strong>$39</strong>
-                  <a class="button button--primary" href="./Courses/index.html">
+                  <a class="button button--primary" href="#/courses">
                     Enroll Now
                   </a>
                 </div>
@@ -119,7 +119,7 @@ export function HomePage() {
                 <p>Engaging stories and games to learn English naturally.</p>
                 <div class="course__footer">
                   <strong>$59</strong>
-                  <a class="button button--primary" href="./Courses/index.html">
+                  <a class="button button--primary" href="#/courses">
                     Enroll Now
                   </a>
                 </div>
