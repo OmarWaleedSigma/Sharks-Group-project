@@ -57,7 +57,8 @@ function updateActiveNavigation(currentRoute) {
   });
 }
 
-export function renderCurrentRoute() {
+export async function renderCurrentRoute() {
+  // استخدمنا async لأن بعض الصفحات تحتاج انتظار بيانات من الـ API
   const app = document.querySelector("#app");
   const currentRoute = getCurrentRoute();
 
@@ -71,11 +72,31 @@ export function renderCurrentRoute() {
     return;
   }
 
-  // تغيير عنوان التاب
-  document.title = route.title;
+  // نعرض رسالة تحميل بسيطة أثناء انتظار تحميل الصفحة
+  app.innerHTML = "<p>Loading page...</p>";
 
-  // وضع محتوى الصفحة داخل main
-  app.innerHTML = route.render();
+  try {
+    // await ينتظر انتهاء تحميل الصفحة قبل عرضها
+    const page = await route.render();
+    app.innerHTML = page;
+
+    // تغيير عنوان التاب
+    document.title = route.title;
+
+    // وضع محتوى الصفحة داخل main
+  } catch (error) {
+    // try يجرب تنفيذ الكود الذي قد ينتج عنه خطأ
+    // catch يمسك الخطأ حتى لا يتوقف الموقع بالكامل
+    document.title = "Error | SHARKS Online School";
+
+    app.innerHTML = `
+      <p>Something went wrong.</p>
+      <p>We could not load this page. Please try again.</p>
+    `;
+
+    // المستخدم يرى رسالة بسيطة بينما المطور يرى تفاصيل الخطأ
+    console.error(error);
+  }
 
   // تحديث اللينك النشط
   updateActiveNavigation(currentRoute);

@@ -202,6 +202,14 @@
       "role": "History & Ethics",
       "bio": "Ray explores the history of navigation and ensures every student learns the value of safe travels.",
       "image": "/assets/Prof. Ray.png"
+    },
+    {
+      "id": "5",
+      "order": 5,
+      "name": "Coach Marina",
+      "role": "Communication Skills",
+      "bio": "Marina helps students speak with confidence and work together.",
+      "image": "/assets/Navigator Julia.png"
     }
   ],
   "pricingPlans": [

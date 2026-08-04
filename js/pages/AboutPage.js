@@ -1,4 +1,31 @@
-export function AboutPage() {
+import { getJson } from "../api.js";
+
+// member يمثل عضوًا واحدًا من أعضاء الفريق
+function createCrewCard(member) {
+  return `
+    <article class="teacher">
+      <img
+        src="${member.image}"
+        alt="${member.name}"
+        width="192"
+        height="192"
+        loading="lazy"
+      />
+      <h3>${member.name}</h3>
+      <p class="teacher__role">${member.role}</p>
+      <p>${member.bio}</p>
+    </article>
+  `;
+}
+
+export async function AboutPage() {
+  // المصفوفة crew تحتوي على جميع أعضاء الفريق القادمين من الـ API
+  const crew = await getJson("/crew?_sort=order");
+
+  // map() تحول كل عضو إلى بطاقة HTML
+  // join("") تجمع جميع البطاقات في String واحدة ليتم عرضها داخل الصفحة
+  const crewCards = crew.map((member) => createCrewCard(member)).join("");
+
   return `
       <section class="about-hero">
         <div class="about-hero__layout container">
@@ -45,68 +72,11 @@ export function AboutPage() {
               path.
             </p>
           </div>
+
           <div class="crew-grid">
-            <article class="teacher">
-              <img
-                src="../../assets/CaptainSarah.png"
-                alt="Captain Sarah"
-                width="192"
-                height="192"
-                loading="lazy"
-              />
-              <h3>Captain Sarah</h3>
-              <p class="teacher__role">Marine Biology Lead</p>
-              <p>
-                Sarah has spent 15 years studying the deep blue and loves
-                sharing oceanic secrets with curious minds.
-              </p>
-            </article>
-            <article class="teacher">
-              <img
-                src="../../assets/Dr. Finn.png"
-                alt="Dr. Finn"
-                width="192"
-                height="192"
-                loading="lazy"
-              />
-              <h3>Dr. Finn</h3>
-              <p class="teacher__role">Tech &amp; Robotics</p>
-              <p>
-                Finn builds underwater drones and teaches students how to code
-                their way through any challenge.
-              </p>
-            </article>
-            <article class="teacher">
-              <img
-                src="../../assets/Navigator Julia.png"
-                alt="Navigator Julia"
-                width="192"
-                height="192"
-                loading="lazy"
-              />
-              <h3>Navigator Julia</h3>
-              <p class="teacher__role">Creative Design</p>
-              <p>
-                Julia helps students map out their imagination, turning digital
-                sketches into interactive worlds.
-              </p>
-            </article>
-            <article class="teacher">
-              <img
-                src="../../assets/Prof. Ray.png"
-                alt="Professor Ray"
-                width="192"
-                height="192"
-                loading="lazy"
-              />
-              <h3>Professor Ray</h3>
-              <p class="teacher__role">History &amp; Ethics</p>
-              <p>
-                Ray explores the history of navigation and ensures every
-                student learns the value of safe travels.
-              </p>
-            </article>
+            ${crewCards}
           </div>
+
         </div>
       </section>
 
