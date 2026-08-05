@@ -20,6 +20,13 @@
       "icon": "▯",
       "title": "Learn Anywhere",
       "description": "Our mobile-first platform allows students to learn on tablets or phones during their commute or at home."
+    },
+    {
+      "id": "4",
+      "order": 4,
+      "icon": "✎",
+      "title": "Creative Expression",
+      "description": "Students can explore their creativity through art, music, and storytelling projects."
     }
   ],
   "popularCourses": [
@@ -30,7 +37,7 @@
       "description": "Learn to build your first website with HTML and CSS.",
       "price": 49,
       "currency": "$",
-      "image": "/assets/Background.png"
+      "image": "./assets/Background.png"
     },
     {
       "id": "2",
@@ -39,7 +46,7 @@
       "description": "Unlock your imagination through digital art techniques.",
       "price": 39,
       "currency": "$",
-      "image": "/assets/Background (1).png"
+      "image": "./assets/Background_1.png"
     },
     {
       "id": "3",
@@ -48,7 +55,7 @@
       "description": "Engaging stories and games to learn English naturally.",
       "price": 59,
       "currency": "$",
-      "image": "/assets/Background (2).png"
+      "image": "./assets/Background_2.png"
     }
   ],
   "successStories": [

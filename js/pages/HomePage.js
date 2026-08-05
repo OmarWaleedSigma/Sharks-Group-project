@@ -1,5 +1,72 @@
-export function HomePage() {
-    return `
+import { getJson } from "../api.js";
+
+function createFeatureCard({ icon, title, description }) {
+  return `
+  <article class="feature">
+            <div class="feature__icon" aria-hidden="true">${icon}</div>
+            <h2>${title}</h2>
+            <p>
+              ${description}
+            </p>
+          </article>`;
+}
+function createCourseCard({ image, title, description, price, currency }) {
+  return `
+  <article class="course">
+              <img
+                src= ${image}
+                alt=""
+                width="374"
+                height="192"
+                loading="lazy"
+              />
+              <div class="course__body">
+                <h3>${title}</h3>
+                <p>${description}</p>
+                <div class="course__footer">
+                  <strong>${currency}${price}</strong>
+                  <a class="button button--primary" href="#/courses">
+                    Enroll Now
+                  </a>
+                </div>
+              </div>
+            </article>
+  `
+}
+function createSuccessStory({ studentName, age, quote, avatarText }) {
+  return `
+  <article class="student">
+              <div class="student__avatar" aria-hidden="true">${avatarText}</div>
+              <blockquote>
+                ${quote}
+              </blockquote>
+              <p>— ${studentName}, ${age} years old</p>
+            </article>`
+}
+export async function HomePage() {
+  const features = await getJson("/homeFeatures?_sort=order");
+  let featureCards;
+   if (features.length === 0) {
+    featureCards = `<p>No features available at the moment.</p>`;
+   }else {
+    featureCards = features.map((feature) => createFeatureCard(feature)).join("");
+   }
+  
+  const courses = await getJson("/popularCourses?_sort=order");
+  let courseCards;
+   if (courses.length === 0) {
+    courseCards = `<p>No courses available at the moment.</p>`;
+   }else {
+    courseCards = courses.map((course) => createCourseCard(course)).join("");
+   }
+  const successStories = await getJson("/successStories?_sort=order");
+  let successStoryCards;``
+   if (successStories.length === 0) {
+    successStoryCards = `<p>No success stories available at the moment.</p>`;
+   }else {
+    successStoryCards = successStories.map((story) => createSuccessStory(story)).join("");
+   }
+  return `
         <section class="hero">
         <div class="hero__content container">
           <h1 class="page-title">Dive Into Learning 🦈</h1>
@@ -29,30 +96,7 @@ export function HomePage() {
 
       <section class="features-section">
         <div class="features-grid container">
-          <article class="feature">
-            <div class="feature__icon" aria-hidden="true">◎</div>
-            <h2>Focused Learning</h2>
-            <p>
-              Our bite-sized lessons keep kids engaged and on track to master
-              new skills effectively.
-            </p>
-          </article>
-          <article class="feature">
-            <div class="feature__icon" aria-hidden="true">✦</div>
-            <h2>Gamified Experience</h2>
-            <p>
-              Earn badges and points while learning. Education has never felt
-              more like an adventure.
-            </p>
-          </article>
-          <article class="feature">
-            <div class="feature__icon" aria-hidden="true">▯</div>
-            <h2>Learn Anywhere</h2>
-            <p>
-              Our mobile-first platform allows students to learn on tablets or
-              phones during their commute or at home.
-            </p>
-          </article>
+          ${featureCards}
         </div>
       </section>
 
@@ -68,63 +112,7 @@ export function HomePage() {
             </a>
           </div>
           <div class="popular-grid">
-            <article class="course">
-              <img
-                src="./assets/Background.png"
-                alt=""
-                width="374"
-                height="192"
-                loading="lazy"
-              />
-              <div class="course__body">
-                <h3>Web Design Basics</h3>
-                <p>Learn to build your first website with HTML and CSS.</p>
-                <div class="course__footer">
-                  <strong>$49</strong>
-                  <a class="button button--primary" href="#/courses">
-                    Enroll Now
-                  </a>
-                </div>
-              </div>
-            </article>
-            <article class="course">
-              <img
-                src="./assets/Background (1).png"
-                alt=""
-                width="374"
-                height="192"
-                loading="lazy"
-              />
-              <div class="course__body">
-                <h3>Creative Drawing</h3>
-                <p>Unlock your imagination through digital art techniques.</p>
-                <div class="course__footer">
-                  <strong>$39</strong>
-                  <a class="button button--primary" href="#/courses">
-                    Enroll Now
-                  </a>
-                </div>
-              </div>
-            </article>
-            <article class="course">
-              <img
-                src="./assets/Background (2).png"
-                alt=""
-                width="374"
-                height="192"
-                loading="lazy"
-              />
-              <div class="course__body">
-                <h3>English for Kids</h3>
-                <p>Engaging stories and games to learn English naturally.</p>
-                <div class="course__footer">
-                  <strong>$59</strong>
-                  <a class="button button--primary" href="#/courses">
-                    Enroll Now
-                  </a>
-                </div>
-              </div>
-            </article>
+            ${courseCards}
           </div>
         </div>
       </section>
@@ -170,24 +158,9 @@ export function HomePage() {
         <div class="container">
           <h2 class="section-title">Student Success Stories</h2>
           <div class="stories">
-            <article class="student">
-              <div class="student__avatar" aria-hidden="true">L</div>
-              <blockquote>
-                “The coding course helped me build my first game. The lessons
-                made every challenge feel possible.”
-              </blockquote>
-              <p>— Leo, 14 years old</p>
-            </article>
-            <article class="student">
-              <div class="student__avatar" aria-hidden="true">S</div>
-              <blockquote>
-                “I love learning at my own pace, and every new badge makes me
-                excited to keep exploring.”
-              </blockquote>
-              <p>— Sarah, 11 years old</p>
-            </article>
+            ${successStoryCards}
           </div>
         </div>
       </section>
-    `
+    `;
 }

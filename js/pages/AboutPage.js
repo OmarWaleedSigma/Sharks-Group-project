@@ -1,19 +1,19 @@
 import { getJson } from "../api.js";
 
 // member يمثل عضوًا واحدًا من أعضاء الفريق
-function createCrewCard(member) {
+function createCrewCard({image, name, role, bio}) {
   return `
     <article class="teacher">
       <img
-        src="${member.image}"
-        alt="${member.name}"
+        src="${image}"
+        alt="${name}"
         width="192"
         height="192"
         loading="lazy"
       />
-      <h3>${member.name}</h3>
-      <p class="teacher__role">${member.role}</p>
-      <p>${member.bio}</p>
+      <h3>${name}</h3>
+      <p class="teacher__role">${role}</p>
+      <p>${bio}</p>
     </article>
   `;
 }
