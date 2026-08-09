@@ -238,18 +238,22 @@
       "featured": false,
       "features": [
         {
+          "icon": "/assets/feature-enabled.png",
           "label": "Access to introductory courses",
           "included": true
         },
         {
+          "icon": "/assets/feature-enabled.png",
           "label": "Community forum access",
           "included": true
         },
         {
+          "icon": "/assets/feature-enabled.png",
           "label": "Mobile app learning",
           "included": true
         },
         {
+          "icon": "/assets/feature-disabled.png",
           "label": "Certified Diplomas",
           "included": false
         }
@@ -268,22 +272,27 @@
       "badge": "Best Value",
       "features": [
         {
+          "icon": "/assets/Elite-feature.png",
           "label": "Access to all courses",
           "included": true
         },
         {
+          "icon": "/assets/Elite-feature.png",
           "label": "Certified Diplomas",
           "included": true
         },
         {
+          "icon": "/assets/Elite-feature.png",
           "label": "1-on-1 Mentorship",
           "included": true
         },
         {
+          "icon": "/assets/Elite-feature.png",
           "label": "Offline learning downloads",
           "included": true
         },
         {
+          "icon": "/assets/Elite-feature.png",
           "label": "Exclusive Masterclasses",
           "included": true
         }
@@ -301,18 +310,22 @@
       "featured": false,
       "features": [
         {
+          "icon": "/assets/feature-enabled.png",
           "label": "Access to all courses",
           "included": true
         },
         {
+          "icon": "/assets/feature-enabled.png",
           "label": "Certified Diplomas",
           "included": true
         },
         {
+          "icon": "/assets/feature-enabled.png",
           "label": "Live Q&A Sessions",
           "included": true
         },
         {
+          "icon": "/assets/feature-disabled.png",
           "label": "1-on-1 Mentorship",
           "included": false
         }

@@ -39,11 +39,101 @@ function makeCourseCard(course) {
 }
 
 export async function CoursesPage() {
-  const courses = await getJson("/courses?_sort=order");
+  const pageSize = 2;
+  const currentPage = 1;
+  const pagedCourses = await getJson(
+    `/courses?_page=${currentPage}&_per_page=${pageSize}&_sort=order`,
+  );
+  const courses = Array.isArray(pagedCourses.data) ? pagedCourses.data : [];
   const courseCards =
-    Array.isArray(courses) && courses.length > 0
+    courses.length > 0
       ? courses.map((course) => makeCourseCard(course)).join("")
       : `<p class="container">No courses available right now.</p>`;
+  const totalPages = pagedCourses.pages || 1;
+  let paginationMarkup = "";
+
+  for (let i = 1; i <= totalPages; i += 1) {
+    const isCurrent = i === currentPage;
+    const buttonClass = isCurrent ? "current" : "";
+    paginationMarkup += `<button type="button" class="${buttonClass}" data-page="${i}" aria-pressed="${isCurrent}">${i}</button>`;
+  }
+
+  paginationMarkup = `<button type="button" aria-label="Previous page" data-page="prev">←</button>${paginationMarkup}<button type="button" aria-label="Next page" data-page="next">→</button>`;
+
+  setTimeout(() => {
+    // Find the main app container where the page content is rendered.
+    const container = document.querySelector("#app");
+    // Find the pagination controls inside the page.
+    const pagination = container?.querySelector(".pagination");
+    // Find the course grid that will display the cards.
+    const courseGrid = container?.querySelector(".course-grid");
+
+    // Stop here if the pagination or course grid is missing.
+    if (!pagination || !courseGrid) return;
+
+    // Start the current page at the first page.
+    let page = 1;
+    // Store the total number of available pages.
+    let pages = totalPages;
+
+    // Create a function that rebuilds the pagination buttons.
+    const renderButtons = () => {
+      // Start the button markup with the previous-page button.
+      let buttons = `<button type="button" aria-label="Previous page" data-page="prev">←</button>`;
+      // Loop through each page number and create a button for it.
+      for (let i = 1; i <= pages; i += 1) {
+        // Check whether this button represents the active page.
+        const isCurrent = i === page;
+        // Give the active button the current class.
+        const buttonClass = isCurrent ? "current" : "";
+        // Add the page button to the markup.
+        buttons += `<button type="button" class="${buttonClass}" data-page="${i}" aria-pressed="${isCurrent}">${i}</button>`;
+      }
+      // Add the next-page button to the markup.
+      buttons += `<button type="button" aria-label="Next page" data-page="next">→</button>`;
+      // Replace the existing pagination buttons with the new markup.
+      pagination.innerHTML = buttons;
+    };
+
+    // Create a function that loads and displays a specific page of courses.
+    const loadPage = async (pageNumber) => {
+      // Keep the requested page inside the valid range.
+      const safePage = Math.max(1, Math.min(pageNumber, pages));
+      // Fetch the courses for the chosen page from the API.
+      const data = await getJson(
+        `/courses?_page=${safePage}&_per_page=2&_sort=order`,
+      );
+      // Make sure the returned data is an array before using it.
+      const items = Array.isArray(data.data) ? data.data : [];
+      // Replace the course grid content with the new cards.
+      courseGrid.innerHTML =
+        items.length > 0
+          ? items.map((course) => makeCourseCard(course)).join("")
+          : `<p class="container">No courses available right now.</p>`;
+      // Update the total number of pages from the API response.
+      pages = data.pages || 1;
+      // Save the current page number.
+      page = safePage;
+      // Rebuild the pagination buttons for the new page.
+      renderButtons();
+    };
+
+    // Listen for clicks on the pagination buttons.
+    pagination.addEventListener("click", async (event) => {
+      // Find the button that was clicked.
+      const button = event.target.closest("button[data-page]");
+      // Do nothing if the click was not on a pagination button.
+      if (!button) return;
+      // Read the page value from the clicked button.
+      const pageValue = button.dataset.page;
+      // Load the previous page when the previous button is clicked.
+      if (pageValue === "prev") await loadPage(page - 1);
+      // Load the next page when the next button is clicked.
+      else if (pageValue === "next") await loadPage(page + 1);
+      // Load the selected page number for normal page buttons.
+      else await loadPage(Number(pageValue));
+    });
+  }, 0);
 
   return `
     <section class="courses-hero">
@@ -100,11 +190,7 @@ export async function CoursesPage() {
     </section>
 
     <nav class="pagination container" aria-label="Course pages">
-      <button type="button" aria-label="Previous page">←</button>
-      <button type="button" class="current">1</button>
-      <button type="button">2</button>
-      <button type="button">3</button>
-      <button type="button" aria-label="Next page">→</button>
+      ${paginationMarkup}
     </nav>
 
     <section class="newsletter">
@@ -138,4 +224,51 @@ export async function CoursesPage() {
       </div>
     </section>
   `;
+}
+
+export function attachCoursesPagination(container) {
+  const pagination = container.querySelector(".pagination");
+  const courseGrid = container.querySelector(".course-grid");
+
+  if (!pagination || !courseGrid) return;
+
+  let currentPage = 1;
+  let totalPages = 1;
+
+  async function loadPage(pageNumber) {
+    const safePage = Math.max(1, Math.min(pageNumber, totalPages)); // Ensure the page number is within valid bounds
+    const pagedCourses = await getJson(
+      `/courses?_page=${safePage}&_per_page=2&_sort=order`,
+    ); // Adjust the _per_page value as needed
+    const courses = Array.isArray(pagedCourses.data) ? pagedCourses.data : []; // Ensure courses is an array even if the API response is unexpected
+    const courseCards =
+      courses.length > 0
+        ? courses.map((course) => makeCourseCard(course)).join("")
+        : `<p class="container">No courses available right now.</p>`;
+
+    courseGrid.innerHTML = courseCards;
+    totalPages = pagedCourses.pages || 1;
+    currentPage = safePage;
+
+    let buttons = `<button type="button" aria-label="Previous page" data-page="prev">←</button>`;
+    for (let i = 1; i <= totalPages; i += 1) {
+      const isCurrent = i === currentPage;
+      const buttonClass = isCurrent ? "current" : "";
+      buttons += `<button type="button" class="${buttonClass}" data-page="${i}" aria-pressed="${isCurrent}">${i}</button>`;
+    }
+    buttons += `<button type="button" aria-label="Next page" data-page="next">→</button>`;
+    pagination.innerHTML = buttons;
+  }
+
+  pagination.addEventListener("click", async (event) => {
+    const button = event.target.closest("button[data-page]"); // Find the closest button with a data-page attribute
+    if (!button) return;
+
+    const pageValue = button.dataset.page; // Get the value of the data-page attribute
+    if (pageValue === "prev")
+      await loadPage(currentPage - 1); // Load the previous page
+    else if (pageValue === "next")
+      await loadPage(currentPage + 1); // Load the next page
+    else await loadPage(Number(pageValue)); // Load the specific page number
+  });
 }
