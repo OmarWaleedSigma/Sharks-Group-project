@@ -31,7 +31,7 @@ function createCourseCard({ image, title, description, price, currency }) {
                 </div>
               </div>
             </article>
-  `
+  `;
 }
 function createSuccessStory({ studentName, age, quote, avatarText }) {
   return `
@@ -41,31 +41,35 @@ function createSuccessStory({ studentName, age, quote, avatarText }) {
                 ${quote}
               </blockquote>
               <p>— ${studentName}, ${age} years old</p>
-            </article>`
+            </article>`;
 }
 export async function HomePage() {
   const features = await getJson("/homeFeatures?_sort=order");
   let featureCards;
-   if (features.length === 0) {
+  if (features.length === 0) {
     featureCards = `<p>No features available at the moment.</p>`;
-   }else {
-    featureCards = features.map((feature) => createFeatureCard(feature)).join("");
-   }
-  
+  } else {
+    featureCards = features
+      .map((feature) => createFeatureCard(feature))
+      .join("");
+  }
+
   const courses = await getJson("/popularCourses?_sort=order");
   let courseCards;
-   if (courses.length === 0) {
+  if (courses.length === 0) {
     courseCards = `<p>No courses available at the moment.</p>`;
-   }else {
+  } else {
     courseCards = courses.map((course) => createCourseCard(course)).join("");
-   }
+  }
   const successStories = await getJson("/successStories?_sort=order");
-  let successStoryCards;``
-   if (successStories.length === 0) {
+  let successStoryCards;
+  if (successStories.length === 0) {
     successStoryCards = `<p>No success stories available at the moment.</p>`;
-   }else {
-    successStoryCards = successStories.map((story) => createSuccessStory(story)).join("");
-   }
+  } else {
+    successStoryCards = successStories
+      .map((story) => createSuccessStory(story))
+      .join("");
+  }
   return `
         <section class="hero">
         <div class="hero__content container">

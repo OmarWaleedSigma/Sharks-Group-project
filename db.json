@@ -108,6 +108,7 @@
       "id": "1",
       "order": 1,
       "title": "Ocean Explorer Coding",
+      "img": "/assets/course1-img(courses-page).png",
       "description": "Learn the basics of coding through exciting underwater challenges.",
       "category": "coding",
       "rating": 4.9,
@@ -120,6 +121,7 @@
       "id": "2",
       "order": 2,
       "title": "Digital Reef Painting",
+      "img": "/assets/course2-img.png",
       "description": "Create colorful ocean worlds while learning digital painting techniques.",
       "category": "art",
       "rating": 4.8,
@@ -132,6 +134,7 @@
       "id": "3",
       "order": 3,
       "title": "Marine Biology 101",
+      "img": "/assets/course3-img.png",
       "description": "Discover fascinating sea creatures and the ecosystems they call home.",
       "category": "science",
       "rating": 4.9,
@@ -144,6 +147,7 @@
       "id": "4",
       "order": 4,
       "title": "Shark Speak: English",
+      "img": "/assets/course4-img.png",
       "description": "Grow vocabulary and confidence with stories, games, and conversation.",
       "category": "language",
       "rating": 4.7,
@@ -156,6 +160,7 @@
       "id": "5",
       "order": 5,
       "title": "Advanced Python Predator",
+      "img": "/assets/course5-img.png",
       "description": "Build larger Python projects and sharpen problem-solving skills.",
       "category": "coding",
       "rating": 4.9,
@@ -168,6 +173,7 @@
       "id": "6",
       "order": 6,
       "title": "Climate Action Hero",
+      "img": "/assets/course6-img.png",
       "description": "Explore climate science and design a project that protects our planet.",
       "category": "science",
       "rating": 4.8,
@@ -323,6 +329,5 @@
     }
   ],
   "contactMessages": [],
-  "newsletterSubscriptions": [],
-  "$schema": "./node_modules/json-server/schema.json"
+  "newsletterSubscriptions": []
 }
