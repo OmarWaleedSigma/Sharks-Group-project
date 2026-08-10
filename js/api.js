@@ -18,10 +18,7 @@ export async function getJson(endpoint) {
     // نرجع البيانات للدالة التي استدعت getJson()
     return data;
   } catch (error) {
-    console.warn(
-      `Unable to load ${endpoint}. Showing fallback content.`,
-      error,
-    );
-    return [];
+    console.warn(`Unable to load ${endpoint}.`, error);
+    throw error;
   }
 }

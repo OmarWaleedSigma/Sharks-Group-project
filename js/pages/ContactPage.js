@@ -45,6 +45,9 @@ export function ContactPage(){
                 required
               ></textarea>
             </div>
+            <p class="form-state" id="form-status" aria-live="polite">
+              Our crew usually replies within 1–2 school days.
+            </p>
             <button class="button button--primary submit-form" type="submit">
               Send Message
               <img

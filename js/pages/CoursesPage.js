@@ -1,4 +1,13 @@
 import { getJson } from "../api.js";
+import { EmptyState, LoadingState } from "../components/PageState.js";
+
+function coursesEmptyState() {
+  return EmptyState({
+    icon: "⌕",
+    title: "No courses found in these waters",
+    message: "Try another category or check back soon for a new learning adventure.",
+  });
+}
 
 function makeCourseCard(course) {
   const image = course.image || course.img || "./assets/Background.png";
@@ -48,7 +57,7 @@ export async function CoursesPage() {
   const courseCards =
     courses.length > 0
       ? courses.map((course) => makeCourseCard(course)).join("")
-      : `<p class="container">No courses available right now.</p>`;
+      : coursesEmptyState();
   const totalPages = pagedCourses.pages || 1;
   let paginationMarkup = "";
 
@@ -100,16 +109,20 @@ export async function CoursesPage() {
       // Keep the requested page inside the valid range.
       const safePage = Math.max(1, Math.min(pageNumber, pages));
       // Fetch the courses for the chosen page from the API.
-      const data = await getJson(
-        `/courses?_page=${safePage}&_per_page=2&_sort=order`,
-      );
+      courseGrid.setAttribute("aria-busy", "true");
+      courseGrid.innerHTML = LoadingState({
+        title: "Loading more adventures...",
+        message: "The next courses are almost here.",
+      });
+      const data = await getJson(`/courses?_page=${safePage}&_per_page=2&_sort=order`);
       // Make sure the returned data is an array before using it.
       const items = Array.isArray(data.data) ? data.data : [];
       // Replace the course grid content with the new cards.
       courseGrid.innerHTML =
         items.length > 0
           ? items.map((course) => makeCourseCard(course)).join("")
-          : `<p class="container">No courses available right now.</p>`;
+          : coursesEmptyState();
+      courseGrid.removeAttribute("aria-busy");
       // Update the total number of pages from the API response.
       pages = data.pages || 1;
       // Save the current page number.
@@ -244,7 +257,7 @@ export function attachCoursesPagination(container) {
     const courseCards =
       courses.length > 0
         ? courses.map((course) => makeCourseCard(course)).join("")
-        : `<p class="container">No courses available right now.</p>`;
+        : coursesEmptyState();
 
     courseGrid.innerHTML = courseCards;
     totalPages = pagedCourses.pages || 1;

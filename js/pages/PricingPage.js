@@ -1,4 +1,5 @@
 import { getJson } from "../api.js";
+import { EmptyState } from "../components/PageState.js";
 
 function createPassCard({
   name,
@@ -67,7 +68,13 @@ export async function PricingPage() {
   const plans = await getJson("/pricingPlans?_sort=order");
   let planCards;
   if (plans.length === 0) {
-    planCards = `<p>No plans available at the moment.</p>`;
+    planCards = EmptyState({
+      icon: "◇",
+      title: "Learning plans are being updated",
+      message: "We are preparing the best options for every young explorer. Please check back soon.",
+      actionHref: "#/contact",
+      actionLabel: "Contact the Crew",
+    });
   } else {
     planCards = plans.map((plan) => createPassCard(plan)).join("");
   }

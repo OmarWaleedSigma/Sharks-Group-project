@@ -1,4 +1,5 @@
 import { getJson } from "../api.js";
+import { EmptyState } from "../components/PageState.js";
 
 function createFeatureCard({ icon, title, description }) {
   return `
@@ -47,7 +48,11 @@ export async function HomePage() {
   const features = await getJson("/homeFeatures?_sort=order");
   let featureCards;
   if (features.length === 0) {
-    featureCards = `<p>No features available at the moment.</p>`;
+    featureCards = EmptyState({
+      icon: "✦",
+      title: "New adventures are on the way",
+      message: "Our learning features are being prepared. Please check back soon.",
+    });
   } else {
     featureCards = features
       .map((feature) => createFeatureCard(feature))
@@ -57,14 +62,24 @@ export async function HomePage() {
   const courses = await getJson("/popularCourses?_sort=order");
   let courseCards;
   if (courses.length === 0) {
-    courseCards = `<p>No courses available at the moment.</p>`;
+    courseCards = EmptyState({
+      icon: "⌁",
+      title: "No popular courses yet",
+      message: "Fresh courses are surfacing soon. Explore the full catalog in the meantime.",
+      actionHref: "#/courses",
+      actionLabel: "Browse Courses",
+    });
   } else {
     courseCards = courses.map((course) => createCourseCard(course)).join("");
   }
   const successStories = await getJson("/successStories?_sort=order");
   let successStoryCards;
   if (successStories.length === 0) {
-    successStoryCards = `<p>No success stories available at the moment.</p>`;
+    successStoryCards = EmptyState({
+      icon: "★",
+      title: "The next success story could be yours",
+      message: "Student stories will appear here as our explorers complete their journeys.",
+    });
   } else {
     successStoryCards = successStories
       .map((story) => createSuccessStory(story))

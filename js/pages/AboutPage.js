@@ -1,4 +1,5 @@
 import { getJson } from "../api.js";
+import { EmptyState } from "../components/PageState.js";
 
 // member يمثل عضوًا واحدًا من أعضاء الفريق
 function createCrewCard({image, name, role, bio}) {
@@ -24,7 +25,13 @@ export async function AboutPage() {
 
   // map() تحول كل عضو إلى بطاقة HTML
   // join("") تجمع جميع البطاقات في String واحدة ليتم عرضها داخل الصفحة
-  const crewCards = crew.map((member) => createCrewCard(member)).join("");
+  const crewCards = crew.length
+    ? crew.map((member) => createCrewCard(member)).join("")
+    : EmptyState({
+        icon: "⚓",
+        title: "Our crew is getting ready",
+        message: "Teacher profiles will be available here soon.",
+      });
 
   return `
       <section class="about-hero">
