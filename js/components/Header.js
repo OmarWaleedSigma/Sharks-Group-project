@@ -1,5 +1,5 @@
 export function Header() {
-    return `
+  return `
     <header class="site-header">
       <nav class="site-nav container" aria-label="Primary navigation">
         <a class="site-brand" href="#/" data-route="/">
@@ -31,12 +31,12 @@ export function Header() {
             <li><a href="#/pricing" data-route="/pricing">Pricing</a></li>
             <li><a href="#/contact" data-route="/contact">Contact</a></li>
           </ul>
-          <a class="button button--nav" href="./Courses/index.html">
+          <a class="button button--nav" href="#/courses">
             Start Learning
           </a>
         </div>
       </nav>
     </header>
     
-    `
+    `;
 }

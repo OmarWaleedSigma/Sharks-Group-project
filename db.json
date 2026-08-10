@@ -20,6 +20,13 @@
       "icon": "▯",
       "title": "Learn Anywhere",
       "description": "Our mobile-first platform allows students to learn on tablets or phones during their commute or at home."
+    },
+    {
+      "id": "4",
+      "order": 4,
+      "icon": "✎",
+      "title": "Creative Expression",
+      "description": "Students can explore their creativity through art, music, and storytelling projects."
     }
   ],
   "popularCourses": [
@@ -30,7 +37,7 @@
       "description": "Learn to build your first website with HTML and CSS.",
       "price": 49,
       "currency": "$",
-      "image": "/assets/Background.png"
+      "image": "./assets/Background.png"
     },
     {
       "id": "2",
@@ -39,7 +46,7 @@
       "description": "Unlock your imagination through digital art techniques.",
       "price": 39,
       "currency": "$",
-      "image": "/assets/Background (1).png"
+      "image": "./assets/Background_1.png"
     },
     {
       "id": "3",
@@ -48,7 +55,7 @@
       "description": "Engaging stories and games to learn English naturally.",
       "price": 59,
       "currency": "$",
-      "image": "/assets/Background (2).png"
+      "image": "./assets/Background_2.png"
     }
   ],
   "successStories": [
@@ -101,6 +108,7 @@
       "id": "1",
       "order": 1,
       "title": "Ocean Explorer Coding",
+      "img": "/assets/course1-img(courses-page).png",
       "description": "Learn the basics of coding through exciting underwater challenges.",
       "category": "coding",
       "rating": 4.9,
@@ -113,6 +121,7 @@
       "id": "2",
       "order": 2,
       "title": "Digital Reef Painting",
+      "img": "/assets/course2-img.png",
       "description": "Create colorful ocean worlds while learning digital painting techniques.",
       "category": "art",
       "rating": 4.8,
@@ -125,6 +134,7 @@
       "id": "3",
       "order": 3,
       "title": "Marine Biology 101",
+      "img": "/assets/course3-img.png",
       "description": "Discover fascinating sea creatures and the ecosystems they call home.",
       "category": "science",
       "rating": 4.9,
@@ -137,6 +147,7 @@
       "id": "4",
       "order": 4,
       "title": "Shark Speak: English",
+      "img": "/assets/course4-img.png",
       "description": "Grow vocabulary and confidence with stories, games, and conversation.",
       "category": "language",
       "rating": 4.7,
@@ -149,6 +160,7 @@
       "id": "5",
       "order": 5,
       "title": "Advanced Python Predator",
+      "img": "/assets/course5-img.png",
       "description": "Build larger Python projects and sharpen problem-solving skills.",
       "category": "coding",
       "rating": 4.9,
@@ -161,6 +173,7 @@
       "id": "6",
       "order": 6,
       "title": "Climate Action Hero",
+      "img": "/assets/course6-img.png",
       "description": "Explore climate science and design a project that protects our planet.",
       "category": "science",
       "rating": 4.8,
@@ -202,6 +215,14 @@
       "role": "History & Ethics",
       "bio": "Ray explores the history of navigation and ensures every student learns the value of safe travels.",
       "image": "/assets/Prof. Ray.png"
+    },
+    {
+      "id": "5",
+      "order": 5,
+      "name": "Coach Marina",
+      "role": "Communication Skills",
+      "bio": "Marina helps students speak with confidence and work together.",
+      "image": "/assets/Navigator Julia.png"
     }
   ],
   "pricingPlans": [
@@ -217,18 +238,22 @@
       "featured": false,
       "features": [
         {
+          "icon": "/assets/feature-enabled.png",
           "label": "Access to introductory courses",
           "included": true
         },
         {
+          "icon": "/assets/feature-enabled.png",
           "label": "Community forum access",
           "included": true
         },
         {
+          "icon": "/assets/feature-enabled.png",
           "label": "Mobile app learning",
           "included": true
         },
         {
+          "icon": "/assets/feature-disabled.png",
           "label": "Certified Diplomas",
           "included": false
         }
@@ -247,22 +272,27 @@
       "badge": "Best Value",
       "features": [
         {
+          "icon": "/assets/Elite-feature.png",
           "label": "Access to all courses",
           "included": true
         },
         {
+          "icon": "/assets/Elite-feature.png",
           "label": "Certified Diplomas",
           "included": true
         },
         {
+          "icon": "/assets/Elite-feature.png",
           "label": "1-on-1 Mentorship",
           "included": true
         },
         {
+          "icon": "/assets/Elite-feature.png",
           "label": "Offline learning downloads",
           "included": true
         },
         {
+          "icon": "/assets/Elite-feature.png",
           "label": "Exclusive Masterclasses",
           "included": true
         }
@@ -280,18 +310,22 @@
       "featured": false,
       "features": [
         {
+          "icon": "/assets/feature-enabled.png",
           "label": "Access to all courses",
           "included": true
         },
         {
+          "icon": "/assets/feature-enabled.png",
           "label": "Certified Diplomas",
           "included": true
         },
         {
+          "icon": "/assets/feature-enabled.png",
           "label": "Live Q&A Sessions",
           "included": true
         },
         {
+          "icon": "/assets/feature-disabled.png",
           "label": "1-on-1 Mentorship",
           "included": false
         }
@@ -308,6 +342,5 @@
     }
   ],
   "contactMessages": [],
-  "newsletterSubscriptions": [],
-  "$schema": "./node_modules/json-server/schema.json"
+  "newsletterSubscriptions": []
 }
