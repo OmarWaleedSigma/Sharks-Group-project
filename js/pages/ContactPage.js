@@ -1,5 +1,58 @@
-export function ContactPage(){
-    return `
+import { getJson } from "../api.js";
+
+async function submitContactMessage(form) {
+  const status = document.getElementById("form-status");
+
+  const contactMessage = {
+    name: form.name.value.trim(),
+    email: form.email.value.trim(),
+    message: form.message.value.trim(),
+    createdAt: new Date().toISOString(), // Use ISO format so the backend can store a standardized timestamp.
+    status: "new",
+  };
+
+  status.textContent = "Sending your message...";
+
+  try {
+    await getJson("/contactMessages", {
+      method: "POST",
+      body: JSON.stringify(contactMessage),
+    });
+
+    form.reset();
+    status.textContent = "Message sent! We will reply soon.";
+  } catch (error) {
+    console.error(error);
+    status.textContent =
+      "Sorry, your message could not be sent. Please try again later.";
+  }
+}
+
+document.addEventListener("submit", (event) => {
+  // Find the nearest form element with the contact form ID.
+  // This makes sure only our contact page form is handled here.
+  const form = event.target.closest("#contact-form");
+  if (!form) return;
+
+  event.preventDefault();
+  submitContactMessage(form);
+});
+
+export async function ContactPage() {
+  let contactInfo = {
+    email: "hello@sharksschool.com",
+    phone: "+1 (555) 010-2026",
+    address: "The Digital Ocean, Learning Harbor",
+    hours: "Monday–Friday, 9:00 AM–5:00 PM",
+  };
+
+  try {
+    contactInfo = await getJson("/contactInfo/1");
+  } catch (error) {
+    console.error("Failed to load contact info", error);
+  }
+
+  return `
       <section class="contact-hero container">
         <h1 class="page-title">Ready to Make a Splash? Get in Touch!</h1>
         <p>
@@ -12,7 +65,7 @@ export function ContactPage(){
       <section class="contact-section container">
         <div class="contact-form-card">
           <h2 class="visually-hidden">Send us a message</h2>
-          <form class="contact-form" aria-describedby="form-status">
+          <form class="contact-form" id="contact-form" aria-describedby="form-status">
             <div class="contact-form__field">
               <label for="name-input">Your Name</label>
               <input
@@ -61,14 +114,12 @@ export function ContactPage(){
         </div>
         <div class="school-details">
           <h2 class="visually-hidden">School contact information</h2>
-          <img
-            class="contact-details"
-            src="../../assets/Contact Info Card.png"
-            alt="SHARKS Online School contact information"
-            width="503"
-            height="292"
-            loading="lazy"
-          />
+          <div class="contact-details-card">
+            <p><strong>Email:</strong> ${contactInfo.email}</p>
+            <p><strong>Phone:</strong> ${contactInfo.phone}</p>
+            <p><strong>Address:</strong> ${contactInfo.address}</p>
+            <p><strong>Hours:</strong> ${contactInfo.hours}</p>
+          </div>
           <img
             class="contact-decoration"
             src="../../assets/Decorative Image.png"
@@ -88,5 +139,5 @@ export function ContactPage(){
         height="150"
         aria-hidden="true"
       />
-    `
+    `;
 }
