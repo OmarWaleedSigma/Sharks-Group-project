@@ -4,6 +4,7 @@ import { AboutPage } from "./pages/AboutPage.js";
 import { PricingPage } from "./pages/PricingPage.js";
 import { ContactPage } from "./pages/ContactPage.js";
 import { NotFoundPage } from "./pages/NotFoundPage.js";
+import { ErrorState, LoadingState } from "./components/PageState.js";
 
 // كل مسار مرتبط بصفحة وعنوان
 const routes = {
@@ -57,7 +58,8 @@ function updateActiveNavigation(currentRoute) {
   });
 }
 
-export function renderCurrentRoute() {
+export async function renderCurrentRoute() {
+  // استخدمنا async لأن بعض الصفحات تحتاج انتظار بيانات من الـ API
   const app = document.querySelector("#app");
   const currentRoute = getCurrentRoute();
 
@@ -71,13 +73,37 @@ export function renderCurrentRoute() {
     return;
   }
 
-  // تغيير عنوان التاب
-  document.title = route.title;
+  // نعرض رسالة تحميل بسيطة أثناء انتظار تحميل الصفحة
+  app.setAttribute("aria-busy", "true");
+  app.innerHTML = LoadingState();
 
-  // وضع محتوى الصفحة داخل main
-  app.innerHTML = route.render();
+  try {
+    // await ينتظر انتهاء تحميل الصفحة قبل عرضها
+    const page = await route.render();
+    app.innerHTML = page;
+
+    // تغيير عنوان التاب
+    document.title = route.title;
+
+    // وضع محتوى الصفحة داخل main
+  } catch (error) {
+    // try يجرب تنفيذ الكود الذي قد ينتج عنه خطأ
+    // catch يمسك الخطأ حتى لا يتوقف الموقع بالكامل
+    document.title = "Error | SHARKS Online School";
+
+    app.innerHTML = ErrorState();
+    app.querySelector("[data-retry-route]")?.addEventListener(
+      "click",
+      renderCurrentRoute,
+      { once: true },
+    );
+
+    // المستخدم يرى رسالة بسيطة بينما المطور يرى تفاصيل الخطأ
+    console.error(error);
+  }
 
   // تحديث اللينك النشط
+  app.removeAttribute("aria-busy");
   updateActiveNavigation(currentRoute);
 
   // الرجوع إلى أعلى الصفحة

@@ -11,16 +11,16 @@ export function Footer() {
         </div>
         <div class="footer__group">
           <p class="footer__heading">Explore</p>
-          <a class="footer__link" href="./Courses/index.html">Courses</a>
-          <a class="footer__link" href="./Pricing-Page/index.html">Pricing</a>
+          <a class="footer__link" href="#/courses">Courses</a>
+          <a class="footer__link" href="#/pricing">Pricing</a>
           <span class="footer__unavailable" aria-disabled="true"
             >Curriculum</span
           >
         </div>
         <div class="footer__group">
           <p class="footer__heading">Company</p>
-          <a class="footer__link" href="./About/index.html">About</a>
-          <a class="footer__link" href="./Contact/index.html">Contact</a>
+          <a class="footer__link" href="#/about">About</a>
+          <a class="footer__link" href="#/contact">Contact</a>
           <span class="footer__unavailable" aria-disabled="true">Careers</span>
         </div>
         <div class="footer__group">
@@ -28,7 +28,7 @@ export function Footer() {
           <span class="footer__unavailable" aria-disabled="true">
             Privacy Policy
           </span>
-          <span class="footer__unavailable" aria-disabled="true">
+          <span class="footer__unavailable" aria-disabled="true"> 
             Terms of Service
           </span>
         </div>

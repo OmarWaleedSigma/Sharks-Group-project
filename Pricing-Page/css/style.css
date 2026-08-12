@@ -1,3 +1,7 @@
+.pricing-page {
+  padding-block: var(--section-space);
+  background: var(--bg-light-gray-color);
+}
 
 .pricing-hero {
   text-align: center;

@@ -1,4 +1,38 @@
-export function AboutPage() {
+import { getJson } from "../api.js";
+import { EmptyState } from "../components/PageState.js";
+
+// member يمثل عضوًا واحدًا من أعضاء الفريق
+function createCrewCard({image, name, role, bio}) {
+  return `
+    <article class="teacher">
+      <img
+        src="${image}"
+        alt="${name}"
+        width="192"
+        height="192"
+        loading="lazy"
+      />
+      <h3>${name}</h3>
+      <p class="teacher__role">${role}</p>
+      <p>${bio}</p>
+    </article>
+  `;
+}
+
+export async function AboutPage() {
+  // المصفوفة crew تحتوي على جميع أعضاء الفريق القادمين من الـ API
+  const crew = await getJson("/crew?_sort=order");
+
+  // map() تحول كل عضو إلى بطاقة HTML
+  // join("") تجمع جميع البطاقات في String واحدة ليتم عرضها داخل الصفحة
+  const crewCards = crew.length
+    ? crew.map((member) => createCrewCard(member)).join("")
+    : EmptyState({
+        icon: "⚓",
+        title: "Our crew is getting ready",
+        message: "Teacher profiles will be available here soon.",
+      });
+
   return `
       <section class="about-hero">
         <div class="about-hero__layout container">
@@ -13,7 +47,7 @@ export function AboutPage() {
               that guides every young learner to greatness. Our curriculum
               isn't just about facts; it's about the journey of discovery.
             </p>
-            <a class="button about-hero__button" href="../Courses/index.html">
+            <a class="button about-hero__button" href="#/courses">
               Dive In Now
             </a>
           </div>
@@ -45,68 +79,11 @@ export function AboutPage() {
               path.
             </p>
           </div>
+
           <div class="crew-grid">
-            <article class="teacher">
-              <img
-                src="../../assets/CaptainSarah.png"
-                alt="Captain Sarah"
-                width="192"
-                height="192"
-                loading="lazy"
-              />
-              <h3>Captain Sarah</h3>
-              <p class="teacher__role">Marine Biology Lead</p>
-              <p>
-                Sarah has spent 15 years studying the deep blue and loves
-                sharing oceanic secrets with curious minds.
-              </p>
-            </article>
-            <article class="teacher">
-              <img
-                src="../../assets/Dr. Finn.png"
-                alt="Dr. Finn"
-                width="192"
-                height="192"
-                loading="lazy"
-              />
-              <h3>Dr. Finn</h3>
-              <p class="teacher__role">Tech &amp; Robotics</p>
-              <p>
-                Finn builds underwater drones and teaches students how to code
-                their way through any challenge.
-              </p>
-            </article>
-            <article class="teacher">
-              <img
-                src="../../assets/Navigator Julia.png"
-                alt="Navigator Julia"
-                width="192"
-                height="192"
-                loading="lazy"
-              />
-              <h3>Navigator Julia</h3>
-              <p class="teacher__role">Creative Design</p>
-              <p>
-                Julia helps students map out their imagination, turning digital
-                sketches into interactive worlds.
-              </p>
-            </article>
-            <article class="teacher">
-              <img
-                src="../../assets/Prof. Ray.png"
-                alt="Professor Ray"
-                width="192"
-                height="192"
-                loading="lazy"
-              />
-              <h3>Professor Ray</h3>
-              <p class="teacher__role">History &amp; Ethics</p>
-              <p>
-                Ray explores the history of navigation and ensures every
-                student learns the value of safe travels.
-              </p>
-            </article>
+            ${crewCards}
           </div>
+
         </div>
       </section>
 
@@ -186,10 +163,10 @@ export function AboutPage() {
             the waves of knowledge.
           </p>
           <div class="about-cta__actions">
-            <a class="button button--primary" href="../Courses/index.html">
+            <a class="button button--primary" href="#/courses">
               View All Courses
             </a>
-            <a class="button button--outline" href="../Contact/index.html">
+            <a class="button button--outline" href="#/contact">
               Tour the Campus
             </a>
           </div>
