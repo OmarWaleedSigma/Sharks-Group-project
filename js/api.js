@@ -1,5 +1,7 @@
 // اللينك الأساسي الذي سنرسل إليه جميع طلبات الـ API
-const API_URL = "http://localhost:3000";
+const API_URL = ["localhost", "127.0.0.1"].includes(window.location.hostname)
+  ? "http://localhost:3000"
+  : "/api";
 
 // دالة عامة لجلب أي بيانات من الـ API
 export async function getJson(endpoint,options={}) {
