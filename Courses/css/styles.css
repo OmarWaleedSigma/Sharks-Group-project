@@ -27,30 +27,48 @@
 
 @media (max-width: 520px) {
   .course-search {
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    padding: 0.65rem;
   }
 
   .course-search .button {
+    grid-column: 1 / -1;
     width: 100%;
   }
 }
 .course-search {
   display: flex;
-  width: min(100%, 42rem);
-  min-height: 58px;
+  width: min(100%, 44rem);
+  min-height: 64px;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0.9rem;
   margin: 2rem auto 0;
-  padding-inline: 1.25rem;
-  border-radius: var(--radius-lg);
+  padding: 0.45rem 0.5rem 0.45rem 1.25rem;
+  border: 2px solid transparent;
+  border-radius: var(--radius-pill);
   background: var(--bg-white-color);
-  box-shadow: 0 1.25rem 1.5rem -0.75rem rgb(0 0 0 / 20%);
+  box-shadow: 0 1rem 2rem -0.75rem rgb(0 0 0 / 28%);
+  transition: border-color 180ms ease, box-shadow 180ms ease;
 }
 
 .course-search__icon {
-  flex: none;
+  display: grid;
+  width: 1.75rem;
+  height: 1.75rem;
+  flex: 0 0 1.75rem;
+  place-items: center;
   color: var(--icon-gray-color);
-  font-size: 1.5rem;
+}
+
+.course-search__icon svg {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2.25;
 }
 
 .course-search__input {
@@ -62,10 +80,34 @@
   background: transparent;
   color: var(--text-dark-color);
   flex: 1;
+  font-size: 1rem;
+}
+
+.course-search__input::placeholder {
+  color: var(--icon-gray-color);
+  opacity: 0.85;
+}
+
+.course-search__input::-webkit-search-cancel-button {
+  cursor: pointer;
+}
+
+.course-search__button {
+  min-height: 50px;
+  padding-inline: 1.75rem;
+  border: 2px solid var(--btn-dark-blue-color);
+  border-radius: var(--radius-pill);
+  background: var(--btn-dark-blue-color);
+  color: var(--text-light-color);
+  box-shadow: 0 0.5rem 1rem -0.5rem rgb(0 0 0 / 28%);
+  transition: background-color 180ms ease, border-color 180ms ease,
+    box-shadow 180ms ease, transform 180ms ease;
 }
 
 .course-search:focus-within {
-  box-shadow: 0 0 0 4px rgb(234 179 8 / 45%);
+  border-color: var(--bg-medium-blue-color);
+  box-shadow: 0 0 0 4px rgb(33 150 243 / 24%),
+    0 1rem 2rem -0.75rem rgb(0 0 0 / 28%);
 }
 
 .course-categories {
@@ -256,6 +298,13 @@
 }
 
 @media (hover: hover) and (pointer: fine) {
+  .course-search__button:hover {
+    border-color: var(--bg-medium-blue-color);
+    background: var(--bg-medium-blue-color);
+    box-shadow: 0 0.65rem 1.25rem -0.5rem rgb(0 0 0 / 35%);
+    transform: translateY(-1px);
+  }
+
   .category-button:hover {
     border-color: var(--text-light-color);
     background: rgb(255 255 255 / 18%);

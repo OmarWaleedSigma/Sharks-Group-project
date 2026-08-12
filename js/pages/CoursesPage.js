@@ -260,7 +260,11 @@ export async function CoursesPage() {
       <div class="courses-hero__content container">
         <h1 class="page-title">Find Your Next Adventure</h1>
         <form class="course-search" role="search">
-          <span class="course-search__icon" aria-hidden="true">⌕</span>
+          <span class="course-search__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" focusable="false">
+              <path d="m21 21-4.35-4.35m2.35-5.15a7.5 7.5 0 1 1-15 0 7.5 7.5 0 0 1 15 0Z" />
+            </svg>
+          </span>
           <label class="visually-hidden" for="course-search">
             Search courses
           </label>
@@ -271,11 +275,9 @@ export async function CoursesPage() {
             name="course-search"
             placeholder="What do you want to discover today?"
           />
-          <button class="button button--light" type="submit">
+          <button class="button course-search__button" type="submit">
             Search
           </button>
-        </form>
-
         </form>
         <div class="course-categories" aria-label="Course categories">
           ${categoryButtons}
