@@ -19,7 +19,6 @@ async function submitContactMessage(form) {
       body: JSON.stringify(contactMessage),
     });
 
-    form.reset();
     status.textContent = "Message sent! We will reply soon.";
   } catch (error) {
     console.error(error);
